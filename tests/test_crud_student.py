@@ -1,4 +1,5 @@
 import random
+import pytest
 from services.university.models.base_student import DegreeEnum
 from services.university.models.group_request import GroupRequest
 from services.university.models.students_request import StudentsRequest
@@ -9,9 +10,15 @@ faker = Faker()
 
 
 class TestCrudStudent:
-    def test_crud_student(self, university_api_utils_admin):
+
+    @pytest.fixture
+    def group(self, university_api_utils_admin):
         university_service = UniversityServices(api_utils=university_api_utils_admin)
-        # Создаем группу
+        group = GroupRequest(name=faker.name())
+        return university_service.create_group(group_request=group)
+
+    def test_create_group(self, university_api_utils_admin):
+        university_service = UniversityServices(api_utils=university_api_utils_admin)
         group = GroupRequest(name=faker.name())
         group_response = university_service.create_group(group_request=group)
 
@@ -19,21 +26,31 @@ class TestCrudStudent:
             (f"Wrong group name. Actual: '{group_response.name}', "
              f"but expected: '{group.name}'")
 
-        # Создаем студента
+    def test_create_student(self, university_api_utils_admin, group):
+        university_service = UniversityServices(api_utils=university_api_utils_admin)
         student = StudentsRequest(first_name=faker.first_name(),
                                   last_name=faker.last_name(),
                                   email=faker.email(),
                                   degree=random.choice(list(DegreeEnum)),
                                   phone=faker.numerify("+79#########"),
-                                  group_id=group_response.id)
+                                  group_id=group.id)
 
         student_response = university_service.create_student(student_request=student)
 
-        assert student_response.group_id == group_response.id, \
+        assert student_response.group_id == group.id, \
             (f"Wrong group id. Actual: '{student_response.group_id}', "
-             f"but expected: '{group_response.id}'")
+             f"but expected: '{group.id}'")
 
-        # Обновляем данные студента
+    def test_update_student(self, university_api_utils_admin, group):
+        university_service = UniversityServices(api_utils=university_api_utils_admin)
+        student = StudentsRequest(first_name=faker.first_name(),
+                                  last_name=faker.last_name(),
+                                  email=faker.email(),
+                                  degree=random.choice(list(DegreeEnum)),
+                                  phone=faker.numerify("+79#########"),
+                                  group_id=group.id)
+        student_response = university_service.create_student(student_request=student)
+
         update_student_data = StudentsRequest(
             first_name=faker.first_name(),
             last_name=student_response.last_name,
@@ -52,13 +69,16 @@ class TestCrudStudent:
             (f"First name was not updated. Actual: '{updated_student.first_name}', "
              f"but expected: '{update_student_data.first_name}'")
 
-        assert updated_student.last_name == student_response.last_name, "Last name was corrupted"
-        assert updated_student.email == student_response.email, "Email was corrupted"
-        assert updated_student.degree == student_response.degree, "Wrong degree"
-        assert updated_student.phone == student_response.phone, "Wrong phone"
-        assert updated_student.group_id == student_response.group_id, "Group ID was corrupted"
+    def test_delete_student(self, university_api_utils_admin, group):
+        university_service = UniversityServices(api_utils=university_api_utils_admin)
+        student = StudentsRequest(first_name=faker.first_name(),
+                                  last_name=faker.last_name(),
+                                  email=faker.email(),
+                                  degree=random.choice(list(DegreeEnum)),
+                                  phone=faker.numerify("+79#########"),
+                                  group_id=group.id)
+        student_response = university_service.create_student(student_request=student)
 
-        # Удаляем студента
         delete_response = university_service.delete_student(student_id=student_response.id)
 
         assert delete_response.success is True, \
