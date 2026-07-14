@@ -50,7 +50,7 @@ class TestCrudStudent:
 
         assert updated_student.first_name == update_student_data.first_name, \
             (f"First name was not updated. Actual: '{updated_student.first_name}', "
-             f"but expected: '{updated_student.first_name}'")
+             f"but expected: '{update_student_data.first_name}'")
 
         assert updated_student.last_name == student_response.last_name, "Last name was corrupted"
         assert updated_student.email == student_response.email, "Email was corrupted"
@@ -60,6 +60,6 @@ class TestCrudStudent:
 
         # Удаляем студента
         delete_response = university_service.delete_student(student_id=student_response.id)
-        assert delete_response.status_code == 200, \
-            (f"Student was not deleted. Actual: '{delete_response.status_code}', "
-             f"but expected: '200'")
+
+        assert delete_response.success is True, \
+            f"Student was not deleted. Message: {delete_response.message}"
