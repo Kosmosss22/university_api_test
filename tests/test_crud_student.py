@@ -1,6 +1,7 @@
 import random
 import pytest
 from services.university.models.base_student import DegreeEnum
+from services.university.models.expected_student import ExpectedStudent
 from services.university.models.group_request import GroupRequest
 from services.university.models.students_request import StudentsRequest
 from services.university.university_services import UniversityServices
@@ -43,16 +44,35 @@ class TestCrudStudent:
 
     def test_update_student(self, university_api_utils_admin, group):
         university_service = UniversityServices(api_utils=university_api_utils_admin)
-        student = StudentsRequest(first_name=faker.first_name(),
-                                  last_name=faker.last_name(),
-                                  email=faker.email(),
-                                  degree=random.choice(list(DegreeEnum)),
-                                  phone=faker.numerify("+79#########"),
-                                  group_id=group.id)
+
+        student = StudentsRequest(
+            first_name=faker.first_name(),
+            last_name=faker.last_name(),
+            email=faker.email(),
+            degree=random.choice(list(DegreeEnum)),
+            phone=faker.numerify("+79#########"),
+            group_id=group.id
+        )
         student_response = university_service.create_student(student_request=student)
 
-        update_student_data = StudentsRequest(
-            first_name=faker.first_name(),
+        new_first_name = faker.first_name()
+
+        university_service.update_student(
+            student_id=student_response.id,
+            student_request=StudentsRequest(
+                first_name=new_first_name,
+                last_name=student_response.last_name,
+                email=student_response.email,
+                degree=student_response.degree,
+                phone=student_response.phone,
+                group_id=student_response.group_id
+            )
+        )
+
+        updated_student = university_service.get_student(student_id=student_response.id)
+
+        expected_student = ExpectedStudent(
+            first_name=new_first_name,
             last_name=student_response.last_name,
             email=student_response.email,
             degree=student_response.degree,
@@ -60,14 +80,13 @@ class TestCrudStudent:
             group_id=student_response.group_id
         )
 
-        university_service.update_student(student_id=student_response.id,
-                                          student_request=update_student_data)
+        updated_dict = updated_student.dict(exclude={'id'})
+        expected_dict = expected_student.dict()
 
-        updated_student = university_service.get_student(student_id=student_response.id)
-
-        assert updated_student.first_name == update_student_data.first_name, \
-            (f"First name was not updated. Actual: '{updated_student.first_name}', "
-             f"but expected: '{update_student_data.first_name}'")
+        assert updated_dict == expected_dict, \
+            (f"Student data mismatch after update.\n"
+             f"Expected: {expected_dict}\n"
+             f"Actual: {updated_dict}")
 
     def test_delete_student(self, university_api_utils_admin, group):
         university_service = UniversityServices(api_utils=university_api_utils_admin)
