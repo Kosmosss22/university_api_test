@@ -1,8 +1,8 @@
 import random
 import requests
-from constants import VALID_SUBJECTS
 from services.university.helpers.teacher_helper import TeacherHelper
 from faker import Faker
+from services.university.models.subject_enum import SubjectEnum
 
 faker = Faker()
 
@@ -14,7 +14,7 @@ class TestTeachersContract:
         response = teacher_helper.post_teacher(
             {"first_name": faker.first_name(),
              "last_name": faker.last_name(),
-             "subject": random.choice(VALID_SUBJECTS)
+             "subject": random.choice(list(SubjectEnum)).value
              })
 
         assert response.status_code == requests.status_codes.codes.created, \
@@ -27,7 +27,7 @@ class TestTeachersContract:
         response = teacher_helper.post_teacher({
             "first_name": faker.first_name(),
             "last_name": faker.last_name(),
-            "subject": random.choice(VALID_SUBJECTS)
+            "subject": random.choice(list(SubjectEnum)).value
         })
 
         assert response.status_code == requests.status_codes.codes.forbidden, \
