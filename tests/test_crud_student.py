@@ -100,5 +100,5 @@ class TestCrudStudent:
 
         delete_response = university_service.delete_student(student_id=student_response.id)
 
-        assert delete_response.success is True, \
-            f"Student was not deleted. Message: {delete_response.message}"
+        assert delete_response.success, \
+            f"Student was not deleted. Message: {delete_response.detail}"

@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from services.university.models.base_student import DegreeEnum
 
 
@@ -10,5 +10,4 @@ class ExpectedStudent(BaseModel):
     phone: str
     group_id: int
 
-    class Config:
-        use_enum_values = True
+    model_config = ConfigDict(use_enum_values=True)

@@ -37,7 +37,9 @@ class UniversityServices(BaseService):
     def delete_student(self, student_id: int) -> DeleteResponse:
         response = self.student_helper.delete_student(student_id=student_id)
 
-        if response.status_code in [200, 204]:
-            return DeleteResponse(success=True, message="Student deleted")
-        else:
-            return DeleteResponse(success=False, message=f"Failed to delete: {response.status_code}")
+        response_data = response.json()
+
+        is_success = response.status_code in [200, 204]
+        detail_msg = response_data.get("detail", f"Failed with status {response.status_code}")
+
+        return DeleteResponse(success=is_success, detail=detail_msg)

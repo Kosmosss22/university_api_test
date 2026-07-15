@@ -28,7 +28,6 @@ class TestGetStudent:
         # Получаем студента
         get_student = university_service.get_student(student_id=student_response.id)
 
-        assert get_student.id == student_response.id, "ID студента не совпадает"
-        assert get_student.first_name == student_response.first_name, "Имя не совпадает"
-        assert get_student.email == student_response.email, "Email не совпадает"
-        assert get_student.group_id == group_response.id, "ID группы не совпадает"
+        assert get_student == student_response, \
+            f"Students don't match. Actual: {get_student}, \
+            Expected: {student_response}"

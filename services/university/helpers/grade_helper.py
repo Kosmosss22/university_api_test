@@ -13,9 +13,8 @@ class GradeHelper(BaseHelper):
         response = self.api_utils.get(self.ROOT_ENDPOINT)
         return response
 
-    def post_grade(self, json: dict) -> requests.Response:
-        response = self.api_utils.post(self.ROOT_ENDPOINT, json=json)
-        return response
+    def post_grade(self, data: dict) -> requests.Response:
+        return self.api_utils.post(self.ROOT_ENDPOINT, data=data)
 
     def get_grades_stats(
             self,
