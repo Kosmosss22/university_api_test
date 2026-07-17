@@ -4,6 +4,7 @@ from services.university.models.base_student import DegreeEnum
 from services.university.models.expected_student import ExpectedStudent
 from services.university.models.group_request import GroupRequest
 from services.university.models.students_request import StudentsRequest
+from services.university.models.teacher_delete_response import DeleteSuccessResponse
 from services.university.university_services import UniversityServices
 from faker import Faker
 
@@ -80,8 +81,8 @@ class TestCrudStudent:
             group_id=student_response.group_id
         )
 
-        updated_dict = updated_student.dict(exclude={'id'})
-        expected_dict = expected_student.dict()
+        updated_dict = updated_student.model_dump(exclude={'id'})
+        expected_dict = expected_student.model_dump()
 
         assert updated_dict == expected_dict, \
             (f"Student data mismatch after update.\n"
@@ -100,5 +101,8 @@ class TestCrudStudent:
 
         delete_response = university_service.delete_student(student_id=student_response.id)
 
-        assert delete_response.success, \
-            f"Student was not deleted. Message: {delete_response.detail}"
+        assert isinstance(delete_response, DeleteSuccessResponse), \
+            f"Expected DeleteSuccessResponse, but got {type(delete_response)}"
+
+        assert delete_response.detail == "Student deleted", \
+            f"Unexpected detail message: {delete_response.detail}"

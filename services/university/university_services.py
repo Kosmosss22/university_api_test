@@ -5,7 +5,7 @@ from services.university.models.group_request import GroupRequest
 from services.university.models.group_response import GroupResponse
 from services.university.models.students_request import StudentsRequest
 from services.university.models.students_response import StudentsResponse
-from services.university.models.teacher_delete_response import DeleteResponse
+from services.university.models.teacher_delete_response import DeleteErrorResponse, DeleteSuccessResponse
 from utils.api_utils import ApiUtils
 
 
@@ -34,12 +34,10 @@ class UniversityServices(BaseService):
         response = self.student_helper.put_student(student_id=student_id, json=student_request.model_dump())
         return StudentsResponse(**response.json())
 
-    def delete_student(self, student_id: int) -> DeleteResponse:
+    def delete_student(self, student_id: int) -> DeleteSuccessResponse | DeleteErrorResponse:
         response = self.student_helper.delete_student(student_id=student_id)
 
-        response_data = response.json()
-
-        is_success = response.status_code in [200, 204]
-        detail_msg = response_data.get("detail", f"Failed with status {response.status_code}")
-
-        return DeleteResponse(success=is_success, detail=detail_msg)
+        if response.status_code in [200, 204]:
+            return DeleteSuccessResponse(**response.json())
+        else:
+            return DeleteErrorResponse(**response.json())

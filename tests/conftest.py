@@ -58,3 +58,25 @@ def auth_api_utils_admin(access_token):
 def university_api_utils_admin(access_token):
     api_utils = ApiUtils(url=UniversityServices.SERVICES_URL, headers={"Authorization": f"Bearer {access_token}"})
     return api_utils
+
+
+class SoftAssert:
+    def __init__(self):
+        self.errors = []
+
+    def assert_equal(self, actual, expected, message=""):
+        if actual != expected:
+            self.errors.append(f"{message}: expected {expected}, got {actual}")
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if self.errors:
+            raise AssertionError("\n".join(self.errors))
+
+
+@pytest.fixture
+def soft_assert():
+    with SoftAssert() as sa:
+        yield sa

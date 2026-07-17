@@ -1,6 +1,9 @@
 from pydantic import BaseModel
 
 
-class DeleteResponse(BaseModel):
-    success: bool
-    detail: str  
+class DeleteSuccessResponse(BaseModel):
+    detail: str
+
+
+class DeleteErrorResponse(BaseModel):
+    detail: str
