@@ -7,6 +7,7 @@ from services.university.models.grades_stats_response import GradesStatsResponse
 from services.university.models.group_request import GroupRequest
 from services.university.models.students_request import StudentsRequest
 from services.university.university_services import UniversityServices
+from tests.conftest import SoftAssert
 
 faker = Faker()
 
@@ -32,12 +33,10 @@ class TestGradesStats:
         response = grade_helper.get_grades_stats(student_id=student_response.id)
         stats = GradesStatsResponse(**response.json())
 
-        assert stats.count == 0
-        assert stats.min is None
-        assert stats.max is None
-        assert stats.avg is None
+        expected = GradesStatsResponse(count=0, min=None, max=None, avg=None)
+        assert stats == expected, f"Stats mismatch.\nExpected: {expected}\nActual: {stats}"
 
-    def test_get_grades_stats_with_data(self, university_api_utils_admin, soft_assert):
+    def test_get_grades_stats_with_data(self, university_api_utils_admin):
         grade_helper = GradeHelper(api_utils=university_api_utils_admin)
         university_service = UniversityServices(api_utils=university_api_utils_admin)
 
@@ -58,13 +57,13 @@ class TestGradesStats:
 
         stats = GradesStatsResponse(**grade_helper.get_grades_stats(student_id=student_response.id).json())
 
-        with soft_assert:
-            soft_assert.assert_equal(stats.count, 2, "Count mismatch")
-            soft_assert.assert_equal(stats.min, MIN_GRADE, "Min grade mismatch")
-            soft_assert.assert_equal(stats.max, MAX_GRADE, "Max grade mismatch")
-            soft_assert.assert_equal(stats.avg, (MIN_GRADE + MAX_GRADE) / 2, "Average grade mismatch")
+        with SoftAssert() as sa:
+            sa.assert_equal(stats.count, 2, "Count mismatch")
+            sa.assert_equal(stats.min, MIN_GRADE, "Min grade mismatch")
+            sa.assert_equal(stats.max, MAX_GRADE, "Max grade mismatch")
+            sa.assert_equal(stats.avg, (MIN_GRADE + MAX_GRADE) / 2, "Average grade mismatch")
 
-    def test_get_grades_stats_filter_by_group(self, university_api_utils_admin, soft_assert):
+    def test_get_grades_stats_filter_by_group(self, university_api_utils_admin):
         grade_helper = GradeHelper(api_utils=university_api_utils_admin)
         university_service = UniversityServices(api_utils=university_api_utils_admin)
 
@@ -96,11 +95,11 @@ class TestGradesStats:
 
         stats = GradesStatsResponse(**grade_helper.get_grades_stats(group_id=group1.id).json())
 
-        with soft_assert:
-            soft_assert.assert_equal(stats.count, 1, "Group filter count mismatch")
-            soft_assert.assert_equal(stats.min, 5, "Group filter min mismatch")
-            soft_assert.assert_equal(stats.max, 5, "Group filter max mismatch")
-            soft_assert.assert_equal(stats.avg, 5.0, "Group filter avg mismatch")
+        with SoftAssert() as sa:
+            sa.assert_equal(stats.count, 1, "Group filter count mismatch")
+            sa.assert_equal(stats.min, 5, "Group filter min mismatch")
+            sa.assert_equal(stats.max, 5, "Group filter max mismatch")
+            sa.assert_equal(stats.avg, 5.0, "Group filter avg mismatch")
 
     def test_get_grades_stats_anonym_forbidden(self, university_api_utils_anonym):
         grade_helper = GradeHelper(api_utils=university_api_utils_anonym)

@@ -39,5 +39,5 @@ class UniversityServices(BaseService):
 
         if response.status_code in [200, 204]:
             return DeleteSuccessResponse(**response.json())
-        else:
-            return DeleteErrorResponse(**response.json())
+
+        return DeleteErrorResponse(**response.json())

@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from services.university.models.subject_enum import SubjectEnum
 
 
@@ -7,5 +7,4 @@ class TeacherRequest(BaseModel):
     last_name: str
     subject: SubjectEnum
 
-    class Config:
-        use_enum_values = True
+    model_config = ConfigDict(use_enum_values=True)

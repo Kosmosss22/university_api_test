@@ -74,9 +74,3 @@ class SoftAssert:
     def __exit__(self, exc_type, exc_val, exc_tb):
         if self.errors:
             raise AssertionError("\n".join(self.errors))
-
-
-@pytest.fixture
-def soft_assert():
-    with SoftAssert() as sa:
-        yield sa
