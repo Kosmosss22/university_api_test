@@ -7,7 +7,7 @@ from services.university.models.grades_stats_response import GradesStatsResponse
 from services.university.models.group_request import GroupRequest
 from services.university.models.students_request import StudentsRequest
 from services.university.university_services import UniversityServices
-from tests.conftest import SoftAssert
+from utils.soft_assert import SoftAssert
 
 faker = Faker()
 

@@ -101,8 +101,7 @@ class TestCrudStudent:
 
         delete_response = university_service.delete_student(student_id=student_response.id)
 
-        assert isinstance(delete_response, DeleteSuccessResponse), \
-            f"Expected DeleteSuccessResponse, but got {type(delete_response)}"
-
-        assert delete_response.detail == "Student deleted", \
-            f"Unexpected detail message: {delete_response.detail}"
+        expected = DeleteSuccessResponse(detail="Student deleted")
+        assert delete_response == expected, \
+            (f"Wrong group id. Actual: '{delete_response}', "
+             f"but expected: '{expected}'")
