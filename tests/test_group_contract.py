@@ -12,6 +12,5 @@ class TestGroupContract:
 
         response = group_helper.post_group({"name": faker.name()})
 
-        assert response.status_code == requests.status_codes.codes.unauthorized, \
-            (f"Wrong status code. Actual: '{response.status_code}', "
-             f"but expected: '{requests.status_codes.codes.unauthorized}'")
+        assert response.status_code == requests.status_codes.codes.forbidden, \
+            f"Wrong status code. Actual: '{response.status_code}', but expected: '403'"

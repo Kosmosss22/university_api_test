@@ -1,0 +1,13 @@
+[2026-08-03 14:24:10,211 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 152' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kimberly50&password=n2a%24i%40Ptqyc0zXV_%24NhD2nziROZ%28NP&password_repeat=n2a%24i%40Ptqyc0zXV_%24NhD2nziROZ%28NP&email=melanie13%40example.com' http://auth:8000/auth/register/
+[2026-08-03 14:24:10,212 - INFO] - Response status code: '201',elapsed time: '0:00:00.240138' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-03 14:24:10,522 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kimberly50&password=n2a%24i%40Ptqyc0zXV_%24NhD2nziROZ%28NP' http://auth:8000/auth/login/
+[2026-08-03 14:24:10,522 - INFO] - Response status code: '200',elapsed time: '0:00:00.269427' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIzLCJ1c2VybmFtZSI6ImtpbWJlcmx5NTAiLCJleHAiOjE3ODU3NzQyNTAsImlhdCI6MTc4NTc2NzA1MH0.WIMb7gFRWsiarKtF-PfkWVaucFds5DhrvGIunIUt8bS0lxkNGmYh7uubMbJn1VYAe4hfK_uq6do5vR23X8OQr6L7CxvIt-Gr00MmOv3ow9jbHrLHJMixGgLE0aPtiI3ICTddrQ5C2IMpBlQ_2FykTBVoMv1S7bEMBrAk0ENgJ7Z5ua-1075qSox5C7ldlsZ60mRYapGSay1ZSh7ASr3seI-BpudQpjcrZGHY6R7bPB3P0Z_7e4lSTr7uYgL_Vr3OC0Clk_1a1m1X34YqDRhqnIzed67k2cMAXXjXwj9aIaIbga7uMG3RZFusohYkyKrsGljMfVfczGAz1ih_b-zqBw",
+  "token_type": "Bearer"
+}
+

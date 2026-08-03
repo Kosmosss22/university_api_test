@@ -1,0 +1,20 @@
+[2026-08-03 14:29:46,291 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 156' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=ortizjordan&password=8FPy%2Bsj%2A7R7sJ2Cg%24Lsvy%21J1HGFlwC&password_repeat=8FPy%2Bsj%2A7R7sJ2Cg%24Lsvy%21J1HGFlwC&email=coxchristina%40example.net' http://auth:8000/auth/register/
+[2026-08-03 14:29:46,292 - INFO] - Response status code: '201',elapsed time: '0:00:00.241050' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-03 14:29:46,606 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 68' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=ortizjordan&password=8FPy%2Bsj%2A7R7sJ2Cg%24Lsvy%21J1HGFlwC' http://auth:8000/auth/login/
+[2026-08-03 14:29:46,607 - INFO] - Response status code: '200',elapsed time: '0:00:00.271138' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoib3J0aXpqb3JkYW4iLCJleHAiOjE3ODU3NzQ1ODYsImlhdCI6MTc4NTc2NzM4Nn0.a8O4Toj60oxD2FAA_zNNdzG_9wKMEWNajS9AIR7SFOEI8UXj7coudaYf8YylAX16itPR93_C0J51m36fkFuHSNGdDsW06X-vWNqkiZbay_uw0PNAulD7YTrl4NJMn-CExMVL4AjJkGwClLAozrULiEmoh2vADvFOlDwQC6WKwXPPF6wIp1rDXq4SkBp8CBW-YVNfedn699f44yZkM6WJSPVo0ivGpR2eq7xiyx8PKEIF0xIc99SmUg9uczSOBqk70KMtc2UFx8oPFSRPNAXb-wZxwCnHZlcw83GHfTgvr6ikx-eJuqhnpFtLhijnBl2gJxDHdIXVRgdwH9V_EvLrUQ",
+  "token_type": "Bearer"
+}
+
+[2026-08-03 14:29:46,683 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoib3J0aXpqb3JkYW4iLCJleHAiOjE3ODU3NzQ1ODYsImlhdCI6MTc4NTc2NzM4Nn0.a8O4Toj60oxD2FAA_zNNdzG_9wKMEWNajS9AIR7SFOEI8UXj7coudaYf8YylAX16itPR93_C0J51m36fkFuHSNGdDsW06X-vWNqkiZbay_uw0PNAulD7YTrl4NJMn-CExMVL4AjJkGwClLAozrULiEmoh2vADvFOlDwQC6WKwXPPF6wIp1rDXq4SkBp8CBW-YVNfedn699f44yZkM6WJSPVo0ivGpR2eq7xiyx8PKEIF0xIc99SmUg9uczSOBqk70KMtc2UFx8oPFSRPNAXb-wZxwCnHZlcw83GHfTgvr6ikx-eJuqhnpFtLhijnBl2gJxDHdIXVRgdwH9V_EvLrUQ' -H 'Content-Length: 25' -H 'Content-Type: application/json' -d '{"name": "Kelly Summers"}' http://university:8000/groups/
+[2026-08-03 14:29:46,683 - INFO] - Response status code: '201',elapsed time: '0:00:00.065515' 
+{
+  "name": "Kelly Summers",
+  "id": 1
+}
+

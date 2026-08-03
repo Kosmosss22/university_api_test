@@ -52,8 +52,11 @@ class TestGradesStats:
         )
         student_response = university_service.create_student(student_request=student)
 
-        grade_helper.post_grade(data={"student_id": student_response.id, "teacher_id": 1, "grade": MIN_GRADE})
-        grade_helper.post_grade(data={"student_id": student_response.id, "teacher_id": 1, "grade": MAX_GRADE})
+        resp1 = grade_helper.post_grade(data={"student_id": student_response.id, "teacher_id": 1, "grade": MIN_GRADE})
+        assert resp1.status_code == 201, f"Failed to post MIN_GRADE. Status: {resp1.status_code}"
+
+        resp2 = grade_helper.post_grade(data={"student_id": student_response.id, "teacher_id": 1, "grade": MAX_GRADE})
+        assert resp2.status_code == 201, f"Failed to post MAX_GRADE. Status: {resp2.status_code}"
 
         stats = GradesStatsResponse(**grade_helper.get_grades_stats(student_id=student_response.id).json())
 
@@ -70,7 +73,6 @@ class TestGradesStats:
         group1 = university_service.create_group(group_request=GroupRequest(name=faker.name()))
         group2 = university_service.create_group(group_request=GroupRequest(name=faker.name()))
 
-        # Студент в группе 1 с оценкой 5
         student1 = StudentsRequest(
             first_name=faker.first_name(),
             last_name=faker.last_name(),
@@ -80,7 +82,9 @@ class TestGradesStats:
             group_id=group1.id
         )
         student1_resp = university_service.create_student(student_request=student1)
-        grade_helper.post_grade(data={"student_id": student1_resp.id, "teacher_id": 1, "grade": 5})
+
+        resp1 = grade_helper.post_grade(data={"student_id": student1_resp.id, "teacher_id": 1, "grade": 5})
+        assert resp1.status_code == 201, f"Failed to post grade for student1. Status: {resp1.status_code}"
 
         student2 = StudentsRequest(
             first_name=faker.first_name(),
@@ -91,7 +95,9 @@ class TestGradesStats:
             group_id=group2.id
         )
         student2_resp = university_service.create_student(student_request=student2)
-        grade_helper.post_grade(data={"student_id": student2_resp.id, "teacher_id": 1, "grade": 2})
+
+        resp2 = grade_helper.post_grade(data={"student_id": student2_resp.id, "teacher_id": 1, "grade": 2})
+        assert resp2.status_code == 201, f"Failed to post grade for student2. Status: {resp2.status_code}"
 
         stats = GradesStatsResponse(**grade_helper.get_grades_stats(group_id=group1.id).json())
 

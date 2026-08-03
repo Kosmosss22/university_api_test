@@ -1,0 +1,19 @@
+[2026-08-03 14:35:24,854 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 153' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=michellecombs&password=%2BH5F9ijQqs%2A%294X2MMDd%25ObhYqzN1J1&password_repeat=%2BH5F9ijQqs%2A%294X2MMDd%25ObhYqzN1J1&email=erika94%40example.com' http://auth:8000/auth/register/
+[2026-08-03 14:35:24,854 - INFO] - Response status code: '201',elapsed time: '0:00:00.246623' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-03 14:35:25,164 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 70' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=michellecombs&password=%2BH5F9ijQqs%2A%294X2MMDd%25ObhYqzN1J1' http://auth:8000/auth/login/
+[2026-08-03 14:35:25,164 - INFO] - Response status code: '200',elapsed time: '0:00:00.268217' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjY3LCJ1c2VybmFtZSI6Im1pY2hlbGxlY29tYnMiLCJleHAiOjE3ODU3NzQ5MjUsImlhdCI6MTc4NTc2NzcyNX0.AG5RsovIJE8JUZqh7bV3x113DnmGs-_6O_m_oiwzuvIFhUkjHhCP3H7rDr_0UdoH_vLIbGUzrreenh_dPUQlkGJuhz1HqheD_zwUb0_CSJiz5n_1IM4eHP6i85skBbkL22Ml7S-W8I9rxHoHps2AIesQNFL7N62NOLqiswrzkgOfzDvfIGZgJju_p39cZ5rxautkIlQHX8p-NYWyCLxQMa11gnJ-bS5VRg3VMX_3U45axTloIcbJCj_a75d-RVEkW4GksgrQNVwnzsdDF6QFmOCT3oR-Tko8GEvQ9y8tngzJPM7CFMQ-NtlHJvv7fSzTcfJ0j9oobRfXnBqzSIN1YQ",
+  "token_type": "Bearer"
+}
+
+[2026-08-03 14:35:25,168 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/json' -d '{"first_name": "Kyle", "last_name": "Martin", "subject": "History"}' http://university:8000/teachers/
+[2026-08-03 14:35:25,168 - INFO] - Response status code: '403',elapsed time: '0:00:00.002205' 
+{
+  "detail": "Access denied"
+}
+

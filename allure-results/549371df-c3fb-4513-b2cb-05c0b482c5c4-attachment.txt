@@ -1,0 +1,30 @@
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 152' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=wilkinsonjames&password=L7f9YtJ%29akcW5m8qzI%5EKIt_1KCB52H&password_repeat=L7f9YtJ%29akcW5m8qzI%5EKIt_1KCB52H&email=christopher31%40example.org' http://auth:8000/auth/register/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '201',elapsed time: '0:00:00.237851' 
+{
+  "detail": "User registered"
+}
+
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=wilkinsonjames&password=L7f9YtJ%29akcW5m8qzI%5EKIt_1KCB52H' http://auth:8000/auth/login/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '200',elapsed time: '0:00:00.266554' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwMiwidXNlcm5hbWUiOiJ3aWxraW5zb25qYW1lcyIsImV4cCI6MTc4NTc3NTA4MSwiaWF0IjoxNzg1NzY3ODgxfQ.F_4FVFf-ExJ2DntWZ7WFcPVrnYi3aRwcDBElse32eafy5roqpmJn98BP45rTHriNddx3etvcymZ1EDkh1an51vmoWHXKgxI3_Nou3Rtwo_889DeKT3uQY8GM7V7yM2jBMrMhPICMMmkLV63dkEGcZpf6oPlUoEjzpwYK6yxfClKiROv5QMjfIJOLQxLDg3XdaB13-86dV6QPK0lVHiWLeGdTw-h3lKlO6KwjFQAvo8frATR8rgse2KG_XtVy2w8AkcdEIP-06kmZ-3jCb8PPjSEjcc9T1yPDk5IvifcpkAa_KbAL-PRBmY0svdlyMCM0BHwpfQeV0z757pgVgLeaBQ",
+  "token_type": "Bearer"
+}
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwMiwidXNlcm5hbWUiOiJ3aWxraW5zb25qYW1lcyIsImV4cCI6MTc4NTc3NTA4MSwiaWF0IjoxNzg1NzY3ODgxfQ.F_4FVFf-ExJ2DntWZ7WFcPVrnYi3aRwcDBElse32eafy5roqpmJn98BP45rTHriNddx3etvcymZ1EDkh1an51vmoWHXKgxI3_Nou3Rtwo_889DeKT3uQY8GM7V7yM2jBMrMhPICMMmkLV63dkEGcZpf6oPlUoEjzpwYK6yxfClKiROv5QMjfIJOLQxLDg3XdaB13-86dV6QPK0lVHiWLeGdTw-h3lKlO6KwjFQAvo8frATR8rgse2KG_XtVy2w8AkcdEIP-06kmZ-3jCb8PPjSEjcc9T1yPDk5IvifcpkAa_KbAL-PRBmY0svdlyMCM0BHwpfQeV0z757pgVgLeaBQ' -H 'Content-Length: 77' -H 'Content-Type: application/json' -d '{"first_name": "Joshua", "last_name": "Fischer", "subject": "InvalidSubject"}' http://university:8000/teachers/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '422',elapsed time: '0:00:00.008760' 
+{
+  "detail": [
+    {
+      "type": "enum",
+      "loc": [
+        "body",
+        "subject"
+      ],
+      "msg": "Input should be 'Mathematics', 'Physics', 'History', 'Biology' or 'Geography'",
+      "input": "InvalidSubject",
+      "ctx": {
+        "expected": "'Mathematics', 'Physics', 'History', 'Biology' or 'Geography'"
+      }
+    }
+  ]
+}

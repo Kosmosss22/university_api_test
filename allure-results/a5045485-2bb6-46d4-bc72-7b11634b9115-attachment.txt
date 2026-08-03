@@ -1,0 +1,18 @@
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 159' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=beckkaitlyn&password=2JOIJ80KnjgBu%25fwQ%2Bfqa%2B1%241%23dw76&password_repeat=2JOIJ80KnjgBu%25fwQ%2Bfqa%2B1%241%23dw76&email=matthewkhan%40example.org' http://auth:8000/auth/register/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '201',elapsed time: '0:00:00.240616' 
+{
+  "detail": "User registered"
+}
+
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 70' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=beckkaitlyn&password=2JOIJ80KnjgBu%25fwQ%2Bfqa%2B1%241%23dw76' http://auth:8000/auth/login/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '200',elapsed time: '0:00:00.267356' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjY5LCJ1c2VybmFtZSI6ImJlY2trYWl0bHluIiwiZXhwIjoxNzg1Nzc0OTgzLCJpYXQiOjE3ODU3Njc3ODN9.AMvDXhgzh5yq8wC4ucIUMN3wpToGcZaCVR1CEQXeC7JqJ3RPs_bM35s3IspeRKq_C-VxMCE9pr4hF5fMHD7ClgT3749n61r8Gt_ErmJ2_EkYMYu6yltDG5TwtU0ka4zQDKIu4_5cRL-aucO4GfBRuJvwJwv5o191zuI-sfWiqKSZZF4gCVUKW0SMOkilwyXB_F_PbZROvSUlSXlqdRMK4gheXTnNmFJE9RMkV_K8NcCEyKdt2VnT3nde4kQco-pT--sXJU6Ru1DBOt84s45frnx9XawRpLH5QsZfx8ht0j5fF6Mfj4xhwt7VDkHslGfgEmi4KOtg9BXgOpdJ_gw0mg",
+  "token_type": "Bearer"
+}
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjY5LCJ1c2VybmFtZSI6ImJlY2trYWl0bHluIiwiZXhwIjoxNzg1Nzc0OTgzLCJpYXQiOjE3ODU3Njc3ODN9.AMvDXhgzh5yq8wC4ucIUMN3wpToGcZaCVR1CEQXeC7JqJ3RPs_bM35s3IspeRKq_C-VxMCE9pr4hF5fMHD7ClgT3749n61r8Gt_ErmJ2_EkYMYu6yltDG5TwtU0ka4zQDKIu4_5cRL-aucO4GfBRuJvwJwv5o191zuI-sfWiqKSZZF4gCVUKW0SMOkilwyXB_F_PbZROvSUlSXlqdRMK4gheXTnNmFJE9RMkV_K8NcCEyKdt2VnT3nde4kQco-pT--sXJU6Ru1DBOt84s45frnx9XawRpLH5QsZfx8ht0j5fF6Mfj4xhwt7VDkHslGfgEmi4KOtg9BXgOpdJ_gw0mg' -H 'Content-Length: 24' -H 'Content-Type: application/json' -d '{"name": "Ryan Freeman"}' http://university:8000/groups/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '201',elapsed time: '0:00:00.018427' 
+{
+  "name": "Ryan Freeman",
+  "id": 41
+}

@@ -1,0 +1,12 @@
+INFO     Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 155' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=bernardmoody&password=G8yDvO%2AUC%241OjoK9%2BOT%2Bx2Sl5lORhi&password_repeat=G8yDvO%2AUC%241OjoK9%2BOT%2Bx2Sl5lORhi&email=brittney67%40example.net' http://auth:8000/auth/register/
+INFO     Logger:logger.py:38 Response status code: '201',elapsed time: '0:00:00.237722' 
+{
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=bernardmoody&password=G8yDvO%2AUC%241OjoK9%2BOT%2Bx2Sl5lORhi' http://auth:8000/auth/login/
+INFO     Logger:logger.py:38 Response status code: '200',elapsed time: '0:00:00.279670' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEyLCJ1c2VybmFtZSI6ImJlcm5hcmRtb29keSIsImV4cCI6MTc4NTc3NDI0MywiaWF0IjoxNzg1NzY3MDQzfQ.HS5M6Bjm0IOJpsxsNcKCe4hjmeJeVQdzt85zWEBgxv6IvOzzvoxyrADa4pzaEfaliQfQOUfQDQ_pWCGmwKo3SQ-aa17G8lXStUek47V1VVpCJmm9L33R6dH-l9iSHKFjNRzPE5mQTG6ieXP62hXFTRHevIjb7rug3GNWxOsg8s2Zz9N9qvaabTppXZPatQpqMct_bY_ZbMhTZIpkRk8rV404EFcfMLcbYjqkKfmgcawo7KYA7-i4L4ec8WGhTEq634jeauWJkeS3CIyQP2YmMp7lcyx_xM2TeYA6Vt6B1laYeaZ5Hw4a4GnBqhpOd3NO97i81rvH3_TLdEhiLPWqTw",
+  "token_type": "Bearer"
+}

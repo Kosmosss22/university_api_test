@@ -1,0 +1,17 @@
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 155' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=john19&password=St%2AfAcipNFrGs8f%2AyD%247ZrV%26VxbZ%29W&password_repeat=St%2AfAcipNFrGs8f%2AyD%247ZrV%26VxbZ%29W&email=jocelynbrown%40example.org' http://auth:8000/auth/register/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '201',elapsed time: '0:00:00.237994' 
+{
+  "detail": "User registered"
+}
+
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 65' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=john19&password=St%2AfAcipNFrGs8f%2AyD%247ZrV%26VxbZ%29W' http://auth:8000/auth/login/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '200',elapsed time: '0:00:00.268945' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQyLCJ1c2VybmFtZSI6ImpvaG4xOSIsImV4cCI6MTc4NTc3NDg5NiwiaWF0IjoxNzg1NzY3Njk2fQ.cSGPgqs4FU3JSDmdDkL7qXcU1Wz0j-KAu2klZaCbti_RPfkm3guyy4nIsXcKhFjXnaYedfF-a99346yryFDSOoB7MCT9k7bwcv1uTT0xpkPc4Z1zdrrIoFn8P1uwa7xUVaYZjaB-JdTJ1mUZcbSxz9QXE5hm7VD0j5ZhNDgw9YVKI58uzfhGiv7kGnvK3yNj8ULvr-5wgOGaLkBDHHX23OZRlKcX1nWhP9XLdIMgyd768wAPShTVhC9EAsX69X-CiaVCDALIjkVhvH4gZ5jEHviNTv8TVlPDqQQaYmPPYRwS9IjbtniTlT51Uz4ma3sjvd3gInCxkU4sLDpMcqI3jQ",
+  "token_type": "Bearer"
+}
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' http://university:8000/grades/stats/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '403',elapsed time: '0:00:00.002080' 
+{
+  "detail": "Access denied"
+}

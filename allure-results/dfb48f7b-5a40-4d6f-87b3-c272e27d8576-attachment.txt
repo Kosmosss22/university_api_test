@@ -1,0 +1,13 @@
+[2026-08-03 14:24:04,654 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 166' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=leonlogan&password=B%259qG9%26%2Avf45%24tlUXx%2B%29c%264V%2BOusdf&password_repeat=B%259qG9%26%2Avf45%24tlUXx%2B%29c%264V%2BOusdf&email=zsellers%40example.net' http://auth:8000/auth/register/
+[2026-08-03 14:24:04,655 - INFO] - Response status code: '201',elapsed time: '0:00:00.244427' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-03 14:24:05,010 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 74' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=leonlogan&password=B%259qG9%26%2Avf45%24tlUXx%2B%29c%264V%2BOusdf' http://auth:8000/auth/login/
+[2026-08-03 14:24:05,010 - INFO] - Response status code: '200',elapsed time: '0:00:00.313314' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE1LCJ1c2VybmFtZSI6Imxlb25sb2dhbiIsImV4cCI6MTc4NTc3NDI0NCwiaWF0IjoxNzg1NzY3MDQ0fQ.DMbKTR0HMpL_HpGHsRJfexuebGwByue0GT8uqLBMyTaH1AwGZEi4R90jkSuaQnbCsZbZaYPkiWT3GUL7pbTlrC5lzxE1fLG0pC6jZSjU5xMBYOGcEpNf5DfUUVN9_hXTivafSofLyeY_rC5b7ixyk25kJ7RdKGVV7x_sJfewdu8nNH5TKQkob-2_8jZOGZNi-su5FmAQC3oLh1i8ZRye_P4So_5W6GPY8FwXL4ec7mO6S440bFmcktZRFHsQrDPQPvcA0do1ZCbCeTG6f08xb7x8UH0IAhcAm5X7lThgbQgY9INatV4PnGlECV7D0lvtHLCoD6wFq4O638ZnUYha5g",
+  "token_type": "Bearer"
+}
+

@@ -1,0 +1,18 @@
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 148' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=sharon13&password=jhdp56wW_%5ERc%28NddCblQQ5Wc%5EO%40b2W&password_repeat=jhdp56wW_%5ERc%28NddCblQQ5Wc%5EO%40b2W&email=zthomas%40example.org' http://auth:8000/auth/register/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '201',elapsed time: '0:00:00.260988' 
+{
+  "detail": "User registered"
+}
+
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 65' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=sharon13&password=jhdp56wW_%5ERc%28NddCblQQ5Wc%5EO%40b2W' http://auth:8000/auth/login/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '200',elapsed time: '0:00:00.329767' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjg2LCJ1c2VybmFtZSI6InNoYXJvbjEzIiwiZXhwIjoxNzg1Nzc1MDY5LCJpYXQiOjE3ODU3Njc4Njl9.o-05KGYlWS1iaN-LdZiFQgweWF_3Fo_G6cZ1_-6RG2Skhg9y31GSP1fzoTB3kBt39QigDkJWTdlUVG1x9ydTw1bjMaXf2lxwja-laPL833eHVWhVF_kOlkZYYp4bAayx75v0l9mJMGDmdh58iQ3mwycXUPg8Z0ZUCs18BRS8GSHHHglH1_oCJN9CfVrtkjqTC0hUjYDg-sa1jJAaJ9SY_BWZPgZ5rB9lB96nbMJziSViQ25HTYK8iBKvZ0jTkGqDTNtYnhjqFYNZBTH3slqsn0jZ_Rn-y0MCc5B5TW-0J2gDDoOZnUsUqmwm5xYHEDgoo3xBcZ0J6GyBpBJkL_1JCQ",
+  "token_type": "Bearer"
+}
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjg2LCJ1c2VybmFtZSI6InNoYXJvbjEzIiwiZXhwIjoxNzg1Nzc1MDY5LCJpYXQiOjE3ODU3Njc4Njl9.o-05KGYlWS1iaN-LdZiFQgweWF_3Fo_G6cZ1_-6RG2Skhg9y31GSP1fzoTB3kBt39QigDkJWTdlUVG1x9ydTw1bjMaXf2lxwja-laPL833eHVWhVF_kOlkZYYp4bAayx75v0l9mJMGDmdh58iQ3mwycXUPg8Z0ZUCs18BRS8GSHHHglH1_oCJN9CfVrtkjqTC0hUjYDg-sa1jJAaJ9SY_BWZPgZ5rB9lB96nbMJziSViQ25HTYK8iBKvZ0jTkGqDTNtYnhjqFYNZBTH3slqsn0jZ_Rn-y0MCc5B5TW-0J2gDDoOZnUsUqmwm5xYHEDgoo3xBcZ0J6GyBpBJkL_1JCQ' -H 'Content-Length: 31' -H 'Content-Type: application/json' -d '{"name": "Anthony Woodard PhD"}' http://university:8000/groups/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '201',elapsed time: '0:00:00.013770' 
+{
+  "name": "Anthony Woodard PhD",
+  "id": 51
+}

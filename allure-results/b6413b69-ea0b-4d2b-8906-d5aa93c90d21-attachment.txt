@@ -1,0 +1,13 @@
+[2026-08-03 14:24:03,950 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 170' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=williammorales&password=%2AFKzKY%2B%24l%29vYDI%28tVHv5U%2AtY%21Afq%26D&password_repeat=%2AFKzKY%2B%24l%29vYDI%28tVHv5U%2AtY%21Afq%26D&email=lpalmer%40example.net' http://auth:8000/auth/register/
+[2026-08-03 14:24:03,950 - INFO] - Response status code: '201',elapsed time: '0:00:00.244340' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-03 14:24:04,266 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 79' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=williammorales&password=%2AFKzKY%2B%24l%29vYDI%28tVHv5U%2AtY%21Afq%26D' http://auth:8000/auth/login/
+[2026-08-03 14:24:04,266 - INFO] - Response status code: '200',elapsed time: '0:00:00.272022' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzLCJ1c2VybmFtZSI6IndpbGxpYW1tb3JhbGVzIiwiZXhwIjoxNzg1Nzc0MjQ0LCJpYXQiOjE3ODU3NjcwNDR9.CXjSFAJ0pgaXf103u9LL_HNT-cEDC_tctKgx2aAAdkyxEHz1xOu8JidjhrEgboBW-lnb9y7Qpr5yoU6WBoNoLKeJrTrV6CKi1pG-WL2x8e6kAdXFEwXW21Bvbb34hUO8Adi7eTweAagbHTZELj6e7tfllI7s-MkwNtHmDOmEpu2Ksc9DzXVwpUTXeVTN1I_PtypYuZQHZPVKndzFbVnWa6a99j5cBWpVep5t9DUjgeFekhIDv9NZOu1syvNz4VAz5zURdUDgqHG2LmRAukhSS3ReuFAQQyWrCKb9v4SPUctz6EqtT6ZU4YP5b6-JUVOWZxdWU1_qEeyEoaCEmM9Qpg",
+  "token_type": "Bearer"
+}
+

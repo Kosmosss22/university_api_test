@@ -1,3 +1,5 @@
+import os
+
 from services.general.base_service import BaseService
 from services.university.helpers.group_helper import GroupHelper
 from services.university.helpers.student_helper import StudentsHelper
@@ -10,7 +12,7 @@ from utils.api_utils import ApiUtils
 
 
 class UniversityServices(BaseService):
-    SERVICES_URL = "http://127.0.0.1:8001"
+    SERVICES_URL = os.getenv("UNIV_URL", "http://university:8000")
 
     def __init__(self, api_utils: ApiUtils):
         super().__init__(api_utils)

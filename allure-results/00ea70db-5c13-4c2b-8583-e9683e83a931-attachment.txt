@@ -1,0 +1,441 @@
+[2026-08-03 14:37:59,280 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 174' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kingjo&password=%2B%25E%2B0e5Ldal%21gXMC%2A%29%2648Cz55%40KL%25%2A&password_repeat=%2B%25E%2B0e5Ldal%21gXMC%2A%29%2648Cz55%40KL%25%2A&email=alexander19%40example.com' http://auth:8000/auth/register/
+[2026-08-03 14:37:59,280 - INFO] - Response status code: '201',elapsed time: '0:00:00.234515' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-03 14:37:59,584 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 75' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kingjo&password=%2B%25E%2B0e5Ldal%21gXMC%2A%29%2648Cz55%40KL%25%2A' http://auth:8000/auth/login/
+[2026-08-03 14:37:59,584 - INFO] - Response status code: '200',elapsed time: '0:00:00.261924' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjk4LCJ1c2VybmFtZSI6ImtpbmdqbyIsImV4cCI6MTc4NTc3NTA3OSwiaWF0IjoxNzg1NzY3ODc5fQ.NysGJgY96m18Nb86jg07H9uqQaX0RaMLWfPMjptJ__shk7GXjXNYiJy2oyCLkS_oYtGRM1GGW2khXd-FVuDwaet7E1PEKwEkJjsBGeSVbKtb0KS8dLcPAEHap3OaERF8WA-VFx9aHtpTqJS-BDQe3wwZAW9jXOvPDasWxUtYmcvGdtYzITiTjMjyB_MZQg3s7wosgnqdDacJmTR70Fc4Mx56UMPwmLI_DR90yXVIw-FXvT24NNK0BrTAqrzlmF5ISs2cvAZW2sw-LsYebSnWn4-Sj7VMaZGUi2sfbOc0-vpHkAt3fSmPiHHZBj8KXHAkn7dF-HRgSVJnKxTBLOyMyw",
+  "token_type": "Bearer"
+}
+
+[2026-08-03 14:37:59,598 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjk4LCJ1c2VybmFtZSI6ImtpbmdqbyIsImV4cCI6MTc4NTc3NTA3OSwiaWF0IjoxNzg1NzY3ODc5fQ.NysGJgY96m18Nb86jg07H9uqQaX0RaMLWfPMjptJ__shk7GXjXNYiJy2oyCLkS_oYtGRM1GGW2khXd-FVuDwaet7E1PEKwEkJjsBGeSVbKtb0KS8dLcPAEHap3OaERF8WA-VFx9aHtpTqJS-BDQe3wwZAW9jXOvPDasWxUtYmcvGdtYzITiTjMjyB_MZQg3s7wosgnqdDacJmTR70Fc4Mx56UMPwmLI_DR90yXVIw-FXvT24NNK0BrTAqrzlmF5ISs2cvAZW2sw-LsYebSnWn4-Sj7VMaZGUi2sfbOc0-vpHkAt3fSmPiHHZBj8KXHAkn7dF-HRgSVJnKxTBLOyMyw' http://university:8000/students/
+[2026-08-03 14:37:59,599 - INFO] - Response status code: '200',elapsed time: '0:00:00.013066' 
+[
+  {
+    "first_name": "Lindsey",
+    "last_name": "Mays",
+    "email": "johngarcia@example.net",
+    "degree": "Bachelor",
+    "phone": "+79667564897",
+    "group_id": 2,
+    "id": 1
+  },
+  {
+    "first_name": "Stephanie",
+    "last_name": "Cameron",
+    "email": "bergrandall@example.org",
+    "degree": "Master",
+    "phone": "+79085564602",
+    "group_id": 3,
+    "id": 2
+  },
+  {
+    "first_name": "Alan",
+    "last_name": "Jackson",
+    "email": "drakeashley@example.net",
+    "degree": "Doctorate",
+    "phone": "+79551186506",
+    "group_id": 5,
+    "id": 4
+  },
+  {
+    "first_name": "Jerry",
+    "last_name": "Goodman",
+    "email": "connormoore@example.com",
+    "degree": "Bachelor",
+    "phone": "+79889818423",
+    "group_id": 6,
+    "id": 5
+  },
+  {
+    "first_name": "Larry",
+    "last_name": "Jackson",
+    "email": "darrell08@example.org",
+    "degree": "Doctorate",
+    "phone": "+79849952562",
+    "group_id": 7,
+    "id": 6
+  },
+  {
+    "first_name": "Evan",
+    "last_name": "Rose",
+    "email": "ulawrence@example.net",
+    "degree": "Master",
+    "phone": "+79037426855",
+    "group_id": 8,
+    "id": 7
+  },
+  {
+    "first_name": "Tiffany",
+    "last_name": "Carlson",
+    "email": "bjones@example.org",
+    "degree": "Doctorate",
+    "phone": "+79073182245",
+    "group_id": 9,
+    "id": 8
+  },
+  {
+    "first_name": "Amy",
+    "last_name": "Young",
+    "email": "melissawilson@example.org",
+    "degree": "Bachelor",
+    "phone": "+79183085774",
+    "group_id": 10,
+    "id": 9
+  },
+  {
+    "first_name": "Amy",
+    "last_name": "George",
+    "email": "byrddanny@example.org",
+    "degree": "Master",
+    "phone": "+79736781506",
+    "group_id": 12,
+    "id": 10
+  },
+  {
+    "first_name": "Erin",
+    "last_name": "Wallace",
+    "email": "jonesjeffery@example.org",
+    "degree": "Associate",
+    "phone": "+79670650224",
+    "group_id": 13,
+    "id": 11
+  },
+  {
+    "first_name": "Brian",
+    "last_name": "Mendoza",
+    "email": "smithrebecca@example.net",
+    "degree": "Bachelor",
+    "phone": "+79671429056",
+    "group_id": 15,
+    "id": 13
+  },
+  {
+    "first_name": "Stephen",
+    "last_name": "Davis",
+    "email": "kathryn04@example.net",
+    "degree": "Master",
+    "phone": "+79640445707",
+    "group_id": 16,
+    "id": 14
+  },
+  {
+    "first_name": "Joshua",
+    "last_name": "Nelson",
+    "email": "wbarnes@example.com",
+    "degree": "Associate",
+    "phone": "+79598083853",
+    "group_id": 17,
+    "id": 15
+  },
+  {
+    "first_name": "Maria",
+    "last_name": "Mcgrath",
+    "email": "gnewton@example.org",
+    "degree": "Doctorate",
+    "phone": "+79111303075",
+    "group_id": 18,
+    "id": 16
+  },
+  {
+    "first_name": "Bonnie",
+    "last_name": "Holmes",
+    "email": "josephhall@example.net",
+    "degree": "Associate",
+    "phone": "+79428372724",
+    "group_id": 19,
+    "id": 17
+  },
+  {
+    "first_name": "Susan",
+    "last_name": "Miller",
+    "email": "vgutierrez@example.net",
+    "degree": "Doctorate",
+    "phone": "+79871274714",
+    "group_id": 20,
+    "id": 18
+  },
+  {
+    "first_name": "Jennifer",
+    "last_name": "Frazier",
+    "email": "ebonymorales@example.com",
+    "degree": "Associate",
+    "phone": "+79975415331",
+    "group_id": 22,
+    "id": 19
+  },
+  {
+    "first_name": "Steven",
+    "last_name": "Flores",
+    "email": "williamsjessica@example.com",
+    "degree": "Associate",
+    "phone": "+79125151000",
+    "group_id": 23,
+    "id": 20
+  },
+  {
+    "first_name": "Randall",
+    "last_name": "Lawson",
+    "email": "elizabeth34@example.com",
+    "degree": "Bachelor",
+    "phone": "+79241307960",
+    "group_id": 25,
+    "id": 22
+  },
+  {
+    "first_name": "Sara",
+    "last_name": "Luna",
+    "email": "michele33@example.org",
+    "degree": "Master",
+    "phone": "+79843895472",
+    "group_id": 26,
+    "id": 23
+  },
+  {
+    "first_name": "Krystal",
+    "last_name": "Mathis",
+    "email": "sarah95@example.com",
+    "degree": "Doctorate",
+    "phone": "+79679002840",
+    "group_id": 27,
+    "id": 24
+  },
+  {
+    "first_name": "Brian",
+    "last_name": "Martin",
+    "email": "jortega@example.org",
+    "degree": "Master",
+    "phone": "+79381889918",
+    "group_id": 28,
+    "id": 25
+  },
+  {
+    "first_name": "John",
+    "last_name": "Ali",
+    "email": "xlong@example.net",
+    "degree": "Doctorate",
+    "phone": "+79796150465",
+    "group_id": 29,
+    "id": 26
+  },
+  {
+    "first_name": "Adam",
+    "last_name": "Carson",
+    "email": "alyssa33@example.net",
+    "degree": "Master",
+    "phone": "+79858327642",
+    "group_id": 30,
+    "id": 27
+  },
+  {
+    "first_name": "Matthew",
+    "last_name": "Mcdonald",
+    "email": "utodd@example.org",
+    "degree": "Master",
+    "phone": "+79033417731",
+    "group_id": 32,
+    "id": 28
+  },
+  {
+    "first_name": "Katie",
+    "last_name": "Hamilton",
+    "email": "meganfletcher@example.net",
+    "degree": "Doctorate",
+    "phone": "+79299088222",
+    "group_id": 33,
+    "id": 29
+  },
+  {
+    "first_name": "Bryan",
+    "last_name": "Price",
+    "email": "matthewtodd@example.org",
+    "degree": "Doctorate",
+    "phone": "+79141248653",
+    "group_id": 35,
+    "id": 31
+  },
+  {
+    "first_name": "Michael",
+    "last_name": "Smith",
+    "email": "lucas36@example.com",
+    "degree": "Master",
+    "phone": "+79222321267",
+    "group_id": 36,
+    "id": 32
+  },
+  {
+    "first_name": "Stephen",
+    "last_name": "Thomas",
+    "email": "chelsea28@example.net",
+    "degree": "Associate",
+    "phone": "+79898873886",
+    "group_id": 37,
+    "id": 33
+  },
+  {
+    "first_name": "Lisa",
+    "last_name": "Thomas",
+    "email": "priceandrew@example.com",
+    "degree": "Bachelor",
+    "phone": "+79241796883",
+    "group_id": 38,
+    "id": 34
+  },
+  {
+    "first_name": "Abigail",
+    "last_name": "Baker",
+    "email": "davidestes@example.net",
+    "degree": "Bachelor",
+    "phone": "+79915008447",
+    "group_id": 39,
+    "id": 35
+  },
+  {
+    "first_name": "Lisa",
+    "last_name": "Mills",
+    "email": "ymartinez@example.com",
+    "degree": "Doctorate",
+    "phone": "+79569811873",
+    "group_id": 40,
+    "id": 36
+  },
+  {
+    "first_name": "Rodney",
+    "last_name": "Kirk",
+    "email": "jonathan80@example.com",
+    "degree": "Bachelor",
+    "phone": "+79696922723",
+    "group_id": 42,
+    "id": 37
+  },
+  {
+    "first_name": "Benjamin",
+    "last_name": "Keller",
+    "email": "smithjoshua@example.net",
+    "degree": "Master",
+    "phone": "+79310818818",
+    "group_id": 43,
+    "id": 38
+  },
+  {
+    "first_name": "Keith",
+    "last_name": "Moreno",
+    "email": "alan28@example.net",
+    "degree": "Bachelor",
+    "phone": "+79954770825",
+    "group_id": 45,
+    "id": 40
+  },
+  {
+    "first_name": "Colin",
+    "last_name": "Simmons",
+    "email": "pruittsheri@example.com",
+    "degree": "Doctorate",
+    "phone": "+79466994770",
+    "group_id": 46,
+    "id": 41
+  },
+  {
+    "first_name": "Sarah",
+    "last_name": "Thomas",
+    "email": "leah23@example.net",
+    "degree": "Master",
+    "phone": "+79127825243",
+    "group_id": 47,
+    "id": 42
+  },
+  {
+    "first_name": "Amber",
+    "last_name": "Wallace",
+    "email": "dcisneros@example.com",
+    "degree": "Doctorate",
+    "phone": "+79543620594",
+    "group_id": 49,
+    "id": 43
+  },
+  {
+    "first_name": "Frank",
+    "last_name": "Finley",
+    "email": "nicholechandler@example.net",
+    "degree": "Associate",
+    "phone": "+79824529443",
+    "group_id": 50,
+    "id": 44
+  },
+  {
+    "first_name": "Ronnie",
+    "last_name": "Diaz",
+    "email": "hopkinsmarcus@example.com",
+    "degree": "Associate",
+    "phone": "+79635295928",
+    "group_id": 52,
+    "id": 45
+  },
+  {
+    "first_name": "Carlos",
+    "last_name": "Wilson",
+    "email": "sethandrews@example.net",
+    "degree": "Associate",
+    "phone": "+79411143260",
+    "group_id": 53,
+    "id": 46
+  },
+  {
+    "first_name": "Mary",
+    "last_name": "Palmer",
+    "email": "christopher66@example.com",
+    "degree": "Bachelor",
+    "phone": "+79525304252",
+    "group_id": 55,
+    "id": 48
+  },
+  {
+    "first_name": "Jordan",
+    "last_name": "Moore",
+    "email": "cowens@example.net",
+    "degree": "Bachelor",
+    "phone": "+79731104367",
+    "group_id": 56,
+    "id": 49
+  },
+  {
+    "first_name": "Suzanne",
+    "last_name": "Morgan",
+    "email": "johnjohnston@example.net",
+    "degree": "Associate",
+    "phone": "+79324970570",
+    "group_id": 57,
+    "id": 50
+  },
+  {
+    "first_name": "Paul",
+    "last_name": "Allen",
+    "email": "jonathan87@example.org",
+    "degree": "Doctorate",
+    "phone": "+79294420622",
+    "group_id": 58,
+    "id": 51
+  },
+  {
+    "first_name": "Nathan",
+    "last_name": "Campbell",
+    "email": "thomasaguilar@example.org",
+    "degree": "Master",
+    "phone": "+79035322663",
+    "group_id": 59,
+    "id": 52
+  },
+  {
+    "first_name": "Elizabeth",
+    "last_name": "Lewis",
+    "email": "kingtyler@example.net",
+    "degree": "Doctorate",
+    "phone": "+79912541928",
+    "group_id": 60,
+    "id": 53
+  }
+]
+

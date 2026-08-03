@@ -1,0 +1,17 @@
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 173' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=jeannemarshall&password=%29Ydaft6j%23qOg%2AeJ%40w4Zy6j%28D7Nv%29%28%40&password_repeat=%29Ydaft6j%23qOg%2AeJ%40w4Zy6j%28D7Nv%29%28%40&email=moransusan%40example.org' http://auth:8000/auth/register/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '201',elapsed time: '0:00:00.265261' 
+{
+  "detail": "User registered"
+}
+
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 79' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=jeannemarshall&password=%29Ydaft6j%23qOg%2AeJ%40w4Zy6j%28D7Nv%29%28%40' http://auth:8000/auth/login/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '200',elapsed time: '0:00:00.269139' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUwLCJ1c2VybmFtZSI6ImplYW5uZW1hcnNoYWxsIiwiZXhwIjoxNzg1Nzc0OTAxLCJpYXQiOjE3ODU3Njc3MDF9.VCeyR8D_tDsvgQyCkyWk2sX5v2Gj8YucSRLzb6vZZr_Ci9eFNSsNKHEuCKr-fs3wmVjRP0sQHtjo7TtEOWqzFYXovLCSN4uTERLLc8Pdoct-Rz8XqMraibObgXxZjAIAjM7dw2jfccqgVOCr09pi2kX2y6n28wTnVHzL8qD9iHloOO_SyUBVtxEUWrCFKyxBxwxHhe8-tEHcnvifHdtJkgjoHt1w0sz7_5U53KsRdzrVa-djh2S4TYV9UZsq_K16VscbtLjhNDzdzRcNGj_7SGFUDbWjpIWM352Al_IbAtTF9RmS5MKAoMkYBSoU-9dFj3GXmx8pXoHSLy5Jeiwe5w",
+  "token_type": "Bearer"
+}
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 72' -H 'Content-Type: application/json' -d '{"first_name": "Stephen", "last_name": "Martinez", "subject": "Biology"}' http://university:8000/teachers/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '403',elapsed time: '0:00:00.002465' 
+{
+  "detail": "Access denied"
+}

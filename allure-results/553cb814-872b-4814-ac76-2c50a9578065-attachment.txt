@@ -1,0 +1,13 @@
+[2026-08-03 14:24:02,823 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 159' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=leah59&password=%25%296%24LMY_cK5%243OZLgmchX%2Aq984O%26Uv&password_repeat=%25%296%24LMY_cK5%243OZLgmchX%2Aq984O%26Uv&email=leonardgreen%40example.com' http://auth:8000/auth/register/
+[2026-08-03 14:24:02,823 - INFO] - Response status code: '201',elapsed time: '0:00:00.237852' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-03 14:24:03,154 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=leah59&password=%25%296%24LMY_cK5%243OZLgmchX%2Aq984O%26Uv' http://auth:8000/auth/login/
+[2026-08-03 14:24:03,154 - INFO] - Response status code: '200',elapsed time: '0:00:00.283142' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJ1c2VybmFtZSI6ImxlYWg1OSIsImV4cCI6MTc4NTc3NDI0MywiaWF0IjoxNzg1NzY3MDQzfQ.DJ6GGXXu32n9sBKXE6tWf-gtjySCKGukqd7NN_nfyMCeboe2LyytJEKhEWU0uZV2R3O778jaGRnBxi2C8qJGcKKE4AuDt4ZFESWjvc2h_q-fYtthiX3QNwnSm8_7-fS2AFD5siglJYzPHpEoXrjXluPOxOmmTfjoqRIgPMW6jJZ4NB9fbDFywx6QZFXGeqwxHgl0Ikq8UNX7Z0bvMbWnR3Jv8Ehw_mz7e3kS9PIGMsjv7Rjzf5ARy9WR9BrxGPqwEB_ZlT22zL-WH-gyNodlDHZhw5PGqviHLF75jPQtgwEItP6agNgXxZ1sjbG3ywjgopnXbd88f6Yikli853ilfA",
+  "token_type": "Bearer"
+}
+

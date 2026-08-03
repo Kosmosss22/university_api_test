@@ -1,0 +1,38 @@
+[2026-08-03 14:29:48,389 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 154' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=pruiz&password=USSsx%24TqVOgYm%29l6UYza4p%241%280Pa%2Ae&password_repeat=USSsx%24TqVOgYm%29l6UYza4p%241%280Pa%2Ae&email=jacqueline35%40example.net' http://auth:8000/auth/register/
+[2026-08-03 14:29:48,389 - INFO] - Response status code: '201',elapsed time: '0:00:00.239526' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-03 14:29:48,701 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 64' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=pruiz&password=USSsx%24TqVOgYm%29l6UYza4p%241%280Pa%2Ae' http://auth:8000/auth/login/
+[2026-08-03 14:29:48,702 - INFO] - Response status code: '200',elapsed time: '0:00:00.268584' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoicHJ1aXoiLCJleHAiOjE3ODU3NzQ1ODgsImlhdCI6MTc4NTc2NzM4OH0.gzUBY8xcPMu4PqxC00bzy5yEy0Se6QuoO82oa6_Yaj5boNCsuw3HWiCJtdaqWT0s_GOtNuC4O6NMqcGgs-9OBKbslvMfs_mLn4aSzi2wCxjNLTbTPRDBr7QNjeFYnzLtAUGPjFqKcRu4um3QUz7beTlRSVDYdtFPCgOc5d_ECQm3ZI9yjigHoblHOe5yjLf0qXBPfUCHddTbJhMlnEckm2i_721gWEy_0YVLxGzjstAvN7-MTiFmF2CUwRVXtumgR1QQHDYIxSxTy7wCdUQTvBO1e06qQdizWA6ckDqlY-Ox9dzqY6v4H9PYrOaJm4uzS1UKjfQrz0UppIliFzB6hA",
+  "token_type": "Bearer"
+}
+
+[2026-08-03 14:29:48,716 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoicHJ1aXoiLCJleHAiOjE3ODU3NzQ1ODgsImlhdCI6MTc4NTc2NzM4OH0.gzUBY8xcPMu4PqxC00bzy5yEy0Se6QuoO82oa6_Yaj5boNCsuw3HWiCJtdaqWT0s_GOtNuC4O6NMqcGgs-9OBKbslvMfs_mLn4aSzi2wCxjNLTbTPRDBr7QNjeFYnzLtAUGPjFqKcRu4um3QUz7beTlRSVDYdtFPCgOc5d_ECQm3ZI9yjigHoblHOe5yjLf0qXBPfUCHddTbJhMlnEckm2i_721gWEy_0YVLxGzjstAvN7-MTiFmF2CUwRVXtumgR1QQHDYIxSxTy7wCdUQTvBO1e06qQdizWA6ckDqlY-Ox9dzqY6v4H9PYrOaJm4uzS1UKjfQrz0UppIliFzB6hA' -H 'Content-Length: 24' -H 'Content-Type: application/json' -d '{"name": "Misty Fowler"}' http://university:8000/groups/
+[2026-08-03 14:29:48,717 - INFO] - Response status code: '201',elapsed time: '0:00:00.013411' 
+{
+  "name": "Misty Fowler",
+  "id": 4
+}
+
+[2026-08-03 14:29:48,773 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoicHJ1aXoiLCJleHAiOjE3ODU3NzQ1ODgsImlhdCI6MTc4NTc2NzM4OH0.gzUBY8xcPMu4PqxC00bzy5yEy0Se6QuoO82oa6_Yaj5boNCsuw3HWiCJtdaqWT0s_GOtNuC4O6NMqcGgs-9OBKbslvMfs_mLn4aSzi2wCxjNLTbTPRDBr7QNjeFYnzLtAUGPjFqKcRu4um3QUz7beTlRSVDYdtFPCgOc5d_ECQm3ZI9yjigHoblHOe5yjLf0qXBPfUCHddTbJhMlnEckm2i_721gWEy_0YVLxGzjstAvN7-MTiFmF2CUwRVXtumgR1QQHDYIxSxTy7wCdUQTvBO1e06qQdizWA6ckDqlY-Ox9dzqY6v4H9PYrOaJm4uzS1UKjfQrz0UppIliFzB6hA' -H 'Content-Length: 149' -H 'Content-Type: application/json' -d '{"first_name": "Bridget", "last_name": "Price", "email": "campbellsamuel@example.org", "degree": "Associate", "phone": "+79140356313", "group_id": 4}' http://university:8000/students/
+[2026-08-03 14:29:48,774 - INFO] - Response status code: '201',elapsed time: '0:00:00.012369' 
+{
+  "first_name": "Bridget",
+  "last_name": "Price",
+  "email": "campbellsamuel@example.org",
+  "degree": "Associate",
+  "phone": "+79140356313",
+  "group_id": 4,
+  "id": 3
+}
+
+[2026-08-03 14:29:48,829 - INFO] - Response: curl -X DELETE -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoicHJ1aXoiLCJleHAiOjE3ODU3NzQ1ODgsImlhdCI6MTc4NTc2NzM4OH0.gzUBY8xcPMu4PqxC00bzy5yEy0Se6QuoO82oa6_Yaj5boNCsuw3HWiCJtdaqWT0s_GOtNuC4O6NMqcGgs-9OBKbslvMfs_mLn4aSzi2wCxjNLTbTPRDBr7QNjeFYnzLtAUGPjFqKcRu4um3QUz7beTlRSVDYdtFPCgOc5d_ECQm3ZI9yjigHoblHOe5yjLf0qXBPfUCHddTbJhMlnEckm2i_721gWEy_0YVLxGzjstAvN7-MTiFmF2CUwRVXtumgR1QQHDYIxSxTy7wCdUQTvBO1e06qQdizWA6ckDqlY-Ox9dzqY6v4H9PYrOaJm4uzS1UKjfQrz0UppIliFzB6hA' -H 'Content-Length: 0' http://university:8000/students/3/
+[2026-08-03 14:29:48,830 - INFO] - Response status code: '200',elapsed time: '0:00:00.012536' 
+{
+  "detail": "Student deleted"
+}
+

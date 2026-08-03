@@ -1,0 +1,20 @@
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 163' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=owilson&password=%23O%2BQmeXo%28%2A%23QB7nq4S3%2BDN%28Tib3Uey&password_repeat=%23O%2BQmeXo%28%2A%23QB7nq4S3%2BDN%28Tib3Uey&email=chavezjames%40example.net' http://auth:8000/auth/register/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '201',elapsed time: '0:00:00.234592' 
+{
+  "detail": "User registered"
+}
+
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 70' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=owilson&password=%23O%2BQmeXo%28%2A%23QB7nq4S3%2BDN%28Tib3Uey' http://auth:8000/auth/login/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '200',elapsed time: '0:00:00.259112' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwMCwidXNlcm5hbWUiOiJvd2lsc29uIiwiZXhwIjoxNzg1Nzc1MDgwLCJpYXQiOjE3ODU3Njc4ODB9.YWIKxXY-jl44iSNfMVTgPBsi7WAqGLXrctdxn0yB3-tvNf2QDWRxMKknuRb7TdTAE5l4i3cj1gL4NqcOTHiYsOslpk_v4aiA6gBGET6wtyTPff0rIRLUCrkRQ9Jwd7LwmX_A-o8AmxmJiYx_mD5C3xpuhGaY0S84QL92IR6CzhY6qu8weIwtT7QLI8jrLc44241SUAuLUK1qT4-sHUWh2PguhtbTrEd-7oI2TdqfLJGbV_IgUF_w3djnDRny5Jl1wnTPeGIrRWYuAKcoL89oxvGAMLJdUPU6JopE4sRmjvIrgR1GTo_49ffCusY1-uWzpPvNlcZ0Hw5D1URtFGI5hA",
+  "token_type": "Bearer"
+}
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwMCwidXNlcm5hbWUiOiJvd2lsc29uIiwiZXhwIjoxNzg1Nzc1MDgwLCJpYXQiOjE3ODU3Njc4ODB9.YWIKxXY-jl44iSNfMVTgPBsi7WAqGLXrctdxn0yB3-tvNf2QDWRxMKknuRb7TdTAE5l4i3cj1gL4NqcOTHiYsOslpk_v4aiA6gBGET6wtyTPff0rIRLUCrkRQ9Jwd7LwmX_A-o8AmxmJiYx_mD5C3xpuhGaY0S84QL92IR6CzhY6qu8weIwtT7QLI8jrLc44241SUAuLUK1qT4-sHUWh2PguhtbTrEd-7oI2TdqfLJGbV_IgUF_w3djnDRny5Jl1wnTPeGIrRWYuAKcoL89oxvGAMLJdUPU6JopE4sRmjvIrgR1GTo_49ffCusY1-uWzpPvNlcZ0Hw5D1URtFGI5hA' -H 'Content-Length: 68' -H 'Content-Type: application/json' -d '{"first_name": "Julie", "last_name": "Sawyer", "subject": "Biology"}' http://university:8000/teachers/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '201',elapsed time: '0:00:00.011726' 
+{
+  "first_name": "Julie",
+  "last_name": "Sawyer",
+  "subject": "Biology",
+  "id": 6
+}

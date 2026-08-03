@@ -1,0 +1,12 @@
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 159' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=dgallagher&password=MI4B%5EVL9%26E%29qMG%2Bdy%219VTD1hfrwV%281&password_repeat=MI4B%5EVL9%26E%29qMG%2Bdy%219VTD1hfrwV%281&email=joseph35%40example.com' http://auth:8000/auth/register/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '201',elapsed time: '0:00:00.245440' 
+{
+  "detail": "User registered"
+}
+
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 71' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=dgallagher&password=MI4B%5EVL9%26E%29qMG%2Bdy%219VTD1hfrwV%281' http://auth:8000/auth/login/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '200',elapsed time: '0:00:00.276760' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjI0LCJ1c2VybmFtZSI6ImRnYWxsYWdoZXIiLCJleHAiOjE3ODU3NzQyNTEsImlhdCI6MTc4NTc2NzA1MX0.Bk2tpXGMnjectniG20y1MHjsQDSv_Nr8gnmq4dRQK6XGnFgz0OHBxkSfDCkkPuTZtr6Wp4NV6NdvWkYE4sqtyTFkTwbDG46BRookdHCK9Rwcnw_TRC2KRL0IapKFET8sJwKrF1LMBfhWay5N-57Cze91DUgSNspzC3XCeH-36kl54r8UCuPWs4SCyDJbF24iSrVpSk5wm8d428gAKY70NMEnIIHYF7xRuXAjqZ3LBGJPKzCVnHmu8noCtfI_9udWmRTd4F2pZWb7oEUaMldvjrFHqpIDGoazc16hJSHwdhJtWw8YS_io4bOIqSA-Sq6pCSEvu3oCc0FF_6rxQnwaVQ",
+  "token_type": "Bearer"
+}

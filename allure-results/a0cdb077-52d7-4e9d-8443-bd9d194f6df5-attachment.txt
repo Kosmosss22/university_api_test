@@ -1,0 +1,13 @@
+[2026-08-03 14:24:08,838 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 159' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=adammccarty&password=mxCx%28EvOjq2ABAIXKK9pekq1%40%28%286S2&password_repeat=mxCx%28EvOjq2ABAIXKK9pekq1%40%28%286S2&email=terrymontgomery%40example.org' http://auth:8000/auth/register/
+[2026-08-03 14:24:08,838 - INFO] - Response status code: '201',elapsed time: '0:00:00.238981' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-03 14:24:09,150 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 68' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=adammccarty&password=mxCx%28EvOjq2ABAIXKK9pekq1%40%28%286S2' http://auth:8000/auth/login/
+[2026-08-03 14:24:09,150 - INFO] - Response status code: '200',elapsed time: '0:00:00.268735' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIxLCJ1c2VybmFtZSI6ImFkYW1tY2NhcnR5IiwiZXhwIjoxNzg1Nzc0MjQ5LCJpYXQiOjE3ODU3NjcwNDl9.O6bk6wQ1ioD1Scfy9Kgowc4okzTTyR5W3sKjaPzTE-ayekzLf_PhXxALyFeViFYXZc7_rNbMhia83_2gTlmCk6eRMuxSkFqvT4eos1v25HOioBVUnaObTooXw7fm4SsRWpA4k04PYkz-xZCf578phv8prWtWG8JnRTo4VPIeWA8xvfRX3q-79k6h2KQcH1SDv9f3sdZbCnnH80xko6rOYD7kxdHNetNyna23E5DQvcH0cFvuNlnUKEL2DUUlR_PaekR-2E1sALEg28aYT0sNrd04Wj6lU62_uk4xW4wqIBHMzaYIC0iutmGuWI6_sd4hUUjrrFCS6wl9GPbNqy30jg",
+  "token_type": "Bearer"
+}
+

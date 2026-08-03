@@ -1,0 +1,19 @@
+[2026-08-03 14:37:55,641 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 163' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=tiffanytucker&password=ttx6Jn24Z_w%28%29ncNmbm%26b2_6lHFtJ%28&password_repeat=ttx6Jn24Z_w%28%29ncNmbm%26b2_6lHFtJ%28&email=mcfarlanddanielle%40example.net' http://auth:8000/auth/register/
+[2026-08-03 14:37:55,641 - INFO] - Response status code: '201',elapsed time: '0:00:00.239883' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-03 14:37:55,980 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 70' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=tiffanytucker&password=ttx6Jn24Z_w%28%29ncNmbm%26b2_6lHFtJ%28' http://auth:8000/auth/login/
+[2026-08-03 14:37:55,981 - INFO] - Response status code: '200',elapsed time: '0:00:00.297630' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjkzLCJ1c2VybmFtZSI6InRpZmZhbnl0dWNrZXIiLCJleHAiOjE3ODU3NzUwNzUsImlhdCI6MTc4NTc2Nzg3NX0.Vm5Y0U3laxhsorm6yepuC8gwU1wKkEl3C-2ZzcFgVViAeHy-NQlbCOiQ_gOK6I_qI36-aj6olWP1mWTHwWYD3ABVs0JiFNACYBseA1t2U9ijaMsOFY4R9rMc3zJhazpB5vVOTJYhAGTLBaNKdgLDy7kTPmRWahhYWC3fMzUCuKpUuByIdptXWpBl5uE0NUh-MmuaNvRGIBIX0RQX-fLtLJHFhfEmkA918OZSwLNzDq5ivKbtEU5M_XSwBxbkqH-1edwcVe0HFUd0qYR9icF32YIai_ZQSA-46P07LFwSgxOMIPiXZQbiZM15B-J1vw3RrLrUoBvFDEjjd4Vp0z_RvA",
+  "token_type": "Bearer"
+}
+
+[2026-08-03 14:37:55,997 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' http://university:8000/grades/stats/
+[2026-08-03 14:37:55,998 - INFO] - Response status code: '403',elapsed time: '0:00:00.009526' 
+{
+  "detail": "Access denied"
+}
+

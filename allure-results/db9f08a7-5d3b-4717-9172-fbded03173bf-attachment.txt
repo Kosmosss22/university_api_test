@@ -1,0 +1,3 @@
+[32mINFO    [0m Logger:logger.py:38 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 161' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kthompson&password=DG%23J76z7%214LL_fw%29pCevL1ri8%286KrL&password_repeat=DG%23J76z7%214LL_fw%29pCevL1ri8%286KrL&email=christopherbautista%40example.net' http://auth:8000/auth/register/
+[32mINFO    [0m Logger:logger.py:38 Response status code: '500',elapsed time: '0:00:00.004587' 
+Internal Server Error

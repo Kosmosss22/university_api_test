@@ -1,0 +1,32 @@
+[2026-08-03 14:29:57,100 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 156' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=wmayo&password=MiMP%24%23IAi%24_cQcYb%5E%28%2BT5FjX_80_gC&password_repeat=MiMP%24%23IAi%24_cQcYb%5E%28%2BT5FjX_80_gC&email=margaret79%40example.org' http://auth:8000/auth/register/
+[2026-08-03 14:29:57,101 - INFO] - Response status code: '201',elapsed time: '0:00:00.240235' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-03 14:29:57,412 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 66' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=wmayo&password=MiMP%24%23IAi%24_cQcYb%5E%28%2BT5FjX_80_gC' http://auth:8000/auth/login/
+[2026-08-03 14:29:57,412 - INFO] - Response status code: '200',elapsed time: '0:00:00.268458' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJ1c2VybmFtZSI6IndtYXlvIiwiZXhwIjoxNzg1Nzc0NTk3LCJpYXQiOjE3ODU3NjczOTd9.T0I_7kzevZUZ6HYzhNzujwaJLdt_sP4cTOayEL-crrqgcyv1Z26bnJ0dRR_2Qq3u-yMmOgvpUJ7MSgElxWk87zsQYrjQdLKs0B8QZWK3exwPzY0vb615owiXd4bki8cwBiL7PUqCOOMv1kNGsEBAY6fK2C8I7Wf3Bv816akfJ6qzse0F_TFFqF8FxaPIVyb8qkjfYa9kfdQtF-VXSkycy141RQPMJhM94JUF657qOVMhL8xcG09UZAe2ZZ6TriDd4rtpItXlcPr_YTNYpkw057dC9HTtqZ6otWkOnfaXNYmLzJzjl_QFbNIoeTegJB_oYEI7DQMhQxhD1Kg2l-09kw",
+  "token_type": "Bearer"
+}
+
+[2026-08-03 14:29:57,422 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJ1c2VybmFtZSI6IndtYXlvIiwiZXhwIjoxNzg1Nzc0NTk3LCJpYXQiOjE3ODU3NjczOTd9.T0I_7kzevZUZ6HYzhNzujwaJLdt_sP4cTOayEL-crrqgcyv1Z26bnJ0dRR_2Qq3u-yMmOgvpUJ7MSgElxWk87zsQYrjQdLKs0B8QZWK3exwPzY0vb615owiXd4bki8cwBiL7PUqCOOMv1kNGsEBAY6fK2C8I7Wf3Bv816akfJ6qzse0F_TFFqF8FxaPIVyb8qkjfYa9kfdQtF-VXSkycy141RQPMJhM94JUF657qOVMhL8xcG09UZAe2ZZ6TriDd4rtpItXlcPr_YTNYpkw057dC9HTtqZ6otWkOnfaXNYmLzJzjl_QFbNIoeTegJB_oYEI7DQMhQxhD1Kg2l-09kw' -H 'Content-Length: 78' -H 'Content-Type: application/json' -d '{"first_name": "Danielle", "last_name": "Wilson", "subject": "InvalidSubject"}' http://university:8000/teachers/
+[2026-08-03 14:29:57,422 - INFO] - Response status code: '422',elapsed time: '0:00:00.008513' 
+{
+  "detail": [
+    {
+      "type": "enum",
+      "loc": [
+        "body",
+        "subject"
+      ],
+      "msg": "Input should be 'Mathematics', 'Physics', 'History', 'Biology' or 'Geography'",
+      "input": "InvalidSubject",
+      "ctx": {
+        "expected": "'Mathematics', 'Physics', 'History', 'Biology' or 'Geography'"
+      }
+    }
+  ]
+}
+
