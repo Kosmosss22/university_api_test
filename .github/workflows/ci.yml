@@ -58,7 +58,12 @@ jobs:
       - name: Install Allure
         run: |
           sudo apt-get update
-          sudo apt-get install -y allure
+          sudo apt-get install -y openjdk-17-jre wget unzip
+
+          wget -qO- https://github.com/allure-framework/allure2/releases/download/2.24.0/allure-2.24.0.tgz | tar -xz
+
+          sudo mv allure-2.24.0 /opt/allure
+          sudo ln -s /opt/allure/bin/allure /usr/bin/allure
 
       - name: Generate Allure report
         run: |
