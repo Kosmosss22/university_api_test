@@ -30,10 +30,12 @@ jobs:
       - name: Show PostgreSQL logs if failed
         if: failure()
         run: |
+          echo "--- Docker ps -a ---"
+          docker ps -a
           echo "--- Logs for postgres-university ---"
-          docker compose logs postgres-university
+          docker logs postgres-university
           echo "--- Logs for postgres-auth ---"
-          docker compose logs postgres-auth
+          docker logs postgres-auth
 
       - name: Run Alembic migrations
         run: |
