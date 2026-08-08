@@ -32,7 +32,6 @@ jobs:
           docker compose run --rm auth alembic upgrade head
           docker compose run --rm university alembic upgrade head
 
-
       - name: Run tests in Docker
         run: docker compose run --rm tests
 
@@ -46,7 +45,8 @@ jobs:
   deploy-allure:
     needs: test
     runs-on: ubuntu-latest
-    permissions: contents: write
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
