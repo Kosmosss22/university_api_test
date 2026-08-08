@@ -1,4 +1,0 @@
-[2026-08-03 14:27:00,945 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 154' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=lcalhoun&password=SXfaQSN__E15%2B9gc%23l%40GOg%280R5%40jH5&password_repeat=SXfaQSN__E15%2B9gc%23l%40GOg%280R5%40jH5&email=qmorrison%40example.net' http://auth:8000/auth/register/
-[2026-08-03 14:27:00,945 - INFO] - Response status code: '500',elapsed time: '0:00:00.004445' 
-Internal Server Error
-
