@@ -49,10 +49,9 @@ class TestGradesStats:
         university_service = UniversityServices(api_utils=university_api_utils_admin)
 
         teacher_data = {
-            "first_name": "Test",
-            "last_name": "Teacher",
-            "email": "teacher@test.com",
-            "subject": "Math"
+            "first_name": faker.first_name(),
+            "last_name": faker.last_name(),
+            "subject": "Mathematics"
         }
         teacher_response = teacher_helper.post_teacher(json=teacher_data)
         assert teacher_response.status_code == 201, f"Failed to create teacher: {teacher_response.status_code}"
@@ -90,10 +89,9 @@ class TestGradesStats:
         university_service = UniversityServices(api_utils=university_api_utils_admin)
 
         teacher_data = {
-            "first_name": "Test",
-            "last_name": "Teacher",
-            "email": "teacher@test.com",
-            "subject": "Math"
+            "first_name": faker.first_name(),
+            "last_name": faker.last_name(),
+            "subject": "Mathematics"
         }
         teacher_response = teacher_helper.post_teacher(json=teacher_data)
         assert teacher_response.status_code == 201, f"Failed to create teacher: {teacher_response.status_code}"
