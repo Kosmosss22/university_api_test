@@ -1,9 +1,15 @@
 import random
+
 import requests
 from faker import Faker
+
 from services.university.helpers.grade_helper import GradeHelper
 from services.university.models.base_student import DegreeEnum
-from services.university.models.grades_stats_response import GradesStatsResponse, MIN_GRADE, MAX_GRADE
+from services.university.models.grades_stats_response import (
+    MAX_GRADE,
+    MIN_GRADE,
+    GradesStatsResponse,
+)
 from services.university.models.group_request import GroupRequest
 from services.university.models.students_request import StudentsRequest
 from services.university.university_services import UniversityServices

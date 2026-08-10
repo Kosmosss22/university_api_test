@@ -1,7 +1,9 @@
 import random
+
 import requests
-from services.university.helpers.teacher_helper import TeacherHelper
 from faker import Faker
+
+from services.university.helpers.teacher_helper import TeacherHelper
 from services.university.models.subject_enum import SubjectEnum
 from services.university.models.teacher_request import TeacherRequest
 

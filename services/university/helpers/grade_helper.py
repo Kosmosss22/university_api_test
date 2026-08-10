@@ -1,6 +1,7 @@
+
 import requests
+
 from services.general.helpers.base_helper import BaseHelper
-from typing import Optional
 
 
 class GradeHelper(BaseHelper):
@@ -18,9 +19,9 @@ class GradeHelper(BaseHelper):
 
     def get_grades_stats(
             self,
-            student_id: Optional[int] = None,
-            teacher_id: Optional[int] = None,
-            group_id: Optional[int] = None
+            student_id: int | None = None,
+            teacher_id: int | None = None,
+            group_id: int | None = None
     ) -> requests.Response:
         params = {}
         if student_id is not None:

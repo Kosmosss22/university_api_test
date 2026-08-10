@@ -1,4 +1,5 @@
 import json
+
 import curlify
 import requests
 from requests import Session

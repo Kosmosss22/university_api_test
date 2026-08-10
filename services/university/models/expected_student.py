@@ -1,4 +1,5 @@
 from pydantic import BaseModel, ConfigDict
+
 from services.university.models.base_student import DegreeEnum
 
 

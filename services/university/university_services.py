@@ -7,7 +7,10 @@ from services.university.models.group_request import GroupRequest
 from services.university.models.group_response import GroupResponse
 from services.university.models.students_request import StudentsRequest
 from services.university.models.students_response import StudentsResponse
-from services.university.models.teacher_delete_response import DeleteErrorResponse, DeleteSuccessResponse
+from services.university.models.teacher_delete_response import (
+    DeleteErrorResponse,
+    DeleteSuccessResponse,
+)
 from utils.api_utils import ApiUtils
 
 

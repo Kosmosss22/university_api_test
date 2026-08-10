@@ -1,10 +1,11 @@
 import pytest
+from faker import Faker
+
 from services.auth.auth_services import AuthServices
 from services.auth.models.login_request import LoginRequest
 from services.auth.models.register_request import RegisterRequest
 from services.university.university_services import UniversityServices
 from utils.api_utils import ApiUtils
-from faker import Faker
 
 faker = Faker()
 
