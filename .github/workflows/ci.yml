@@ -13,6 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Run linter (Ruff)
+        run: |
+          pip install ruff
+          ruff check
+
       - name: Create .env file
         run: |
           echo "POSTGRES_USER='${{ vars.POSTGRES_USER }}'" > .env
@@ -25,15 +30,10 @@ jobs:
           echo "AUTH_SERVICE_API_URL='${{ vars.AUTH_SERVICE_API_URL }}'" >> .env
 
       - name: Start API services and wait
-        run: docker compose up -d --wait
-
-      - name: Run Alembic migrations
-        run: |
-          docker compose run --rm auth alembic upgrade head
-          docker compose run --rm university alembic upgrade head
+        run: docker compose -f docker-compose.yml up -d --wait
 
       - name: Run tests in Docker
-        run: docker compose run --rm tests
+        run: docker compose -f docker-compose.yml -f docker-compose.test.yml run --rm tests
 
       - name: Upload Allure results
         if: success() || failure()

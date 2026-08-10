@@ -1,0 +1,13 @@
+services:
+  tests:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    depends_on:
+      - auth
+      - university
+    volumes:
+      - ./allure-results:/app/allure-results
+    environment:
+      - AUTH_URL=http://auth:8000
+      - UNIV_URL=http://university:8000

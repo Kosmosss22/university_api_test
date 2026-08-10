@@ -48,7 +48,7 @@ services:
       postgres_auth:
         condition: service_healthy
     healthcheck:
-      test: [ "CMD-SHELL", "bash -c 'exec 3<>/dev/tcp/localhost/8000'" ]
+      test: [ "CMD-SHELL", "python -c 'import urllib.request; urllib.request.urlopen(\"http://localhost:8000/docs\")'" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -71,21 +71,8 @@ services:
       postgres_university:
         condition: service_healthy
     healthcheck:
-      test: [ "CMD-SHELL", "bash -c 'exec 3<>/dev/tcp/localhost/8000'" ]
+      test: [ "CMD-SHELL", "python -c 'import urllib.request; urllib.request.urlopen(\"http://localhost:8000/docs\")'" ]
       interval: 10s
       timeout: 5s
       retries: 5
       start_period: 30s
-
-  tests:
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    depends_on:
-      - auth
-      - university
-    volumes:
-      - ./allure-results:/app/allure-results
-    environment:
-      - AUTH_URL=http://auth:8000
-      - UNIV_URL=http://university:8000
