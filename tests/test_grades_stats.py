@@ -4,6 +4,7 @@ import requests
 from faker import Faker
 
 from services.university.helpers.grade_helper import GradeHelper
+from services.university.helpers.teacher_helper import TeacherHelper
 from services.university.models.base_student import DegreeEnum
 from services.university.models.grades_stats_response import (
     MAX_GRADE,
@@ -44,15 +45,18 @@ class TestGradesStats:
 
     def test_get_grades_stats_with_data(self, university_api_utils_admin):
         grade_helper = GradeHelper(api_utils=university_api_utils_admin)
+        teacher_helper = TeacherHelper(api_utils=university_api_utils_admin)  # <--- Создаём helper
         university_service = UniversityServices(api_utils=university_api_utils_admin)
 
-        teacher_response = university_service.create_teacher(data={
+        teacher_data = {
             "first_name": "Test",
             "last_name": "Teacher",
             "email": "teacher@test.com",
             "subject": "Math"
-        })
-        teacher_id = teacher_response.id
+        }
+        teacher_response = teacher_helper.post_teacher(json=teacher_data)
+        assert teacher_response.status_code == 201, f"Failed to create teacher: {teacher_response.status_code}"
+        teacher_id = teacher_response.json()["id"]  # <--- Извлекаем ID из JSON
 
         group = GroupRequest(name=faker.name())
         group_response = university_service.create_group(group_request=group)
@@ -82,15 +86,18 @@ class TestGradesStats:
 
     def test_get_grades_stats_filter_by_group(self, university_api_utils_admin):
         grade_helper = GradeHelper(api_utils=university_api_utils_admin)
+        teacher_helper = TeacherHelper(api_utils=university_api_utils_admin)  # <--- Создаём helper
         university_service = UniversityServices(api_utils=university_api_utils_admin)
 
-        teacher_response = university_service.create_teacher(data={
+        teacher_data = {
             "first_name": "Test",
             "last_name": "Teacher",
             "email": "teacher@test.com",
             "subject": "Math"
-        })
-        teacher_id = teacher_response.id
+        }
+        teacher_response = teacher_helper.post_teacher(json=teacher_data)
+        assert teacher_response.status_code == 201, f"Failed to create teacher: {teacher_response.status_code}"
+        teacher_id = teacher_response.json()["id"]
 
         group1 = university_service.create_group(group_request=GroupRequest(name=faker.name()))
         group2 = university_service.create_group(group_request=GroupRequest(name=faker.name()))
