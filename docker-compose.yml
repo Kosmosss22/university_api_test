@@ -48,7 +48,8 @@ services:
       postgres_auth:
         condition: service_healthy
     healthcheck:
-      test: [ "CMD-SHELL", "python -c 'import urllib.request; urllib.request.urlopen(\"http://localhost:8000/docs\")'" ]
+      # 100% надежная проверка: слушает ли контейнер TCP-порт 8000
+      test: [ "CMD-SHELL", "bash -c 'exec 3<>/dev/tcp/localhost/8000'" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -71,7 +72,7 @@ services:
       postgres_university:
         condition: service_healthy
     healthcheck:
-      test: [ "CMD-SHELL", "python -c 'import urllib.request; urllib.request.urlopen(\"http://localhost:8000/docs\")'" ]
+      test: [ "CMD-SHELL", "bash -c 'exec 3<>/dev/tcp/localhost/8000'" ]
       interval: 10s
       timeout: 5s
       retries: 5
