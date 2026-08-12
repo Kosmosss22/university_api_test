@@ -1,0 +1,32 @@
+[2026-08-12 20:07:22,904 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 158' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kthomas&password=%23Dr8LUwp%40nf%2AkJaDpOGL%28r1AEy%28VLt&password_repeat=%23Dr8LUwp%40nf%2AkJaDpOGL%28r1AEy%28VLt&email=patriciagraham%40example.org' http://auth:8000/auth/register/
+[2026-08-12 20:07:22,904 - INFO] - Response status code: '201',elapsed time: '0:00:00.307501' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-12 20:07:23,298 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 66' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kthomas&password=%23Dr8LUwp%40nf%2AkJaDpOGL%28r1AEy%28VLt' http://auth:8000/auth/login/
+[2026-08-12 20:07:23,298 - INFO] - Response status code: '200',elapsed time: '0:00:00.352304' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJ1c2VybmFtZSI6Imt0aG9tYXMiLCJleHAiOjE3ODY1NzI0NDMsImlhdCI6MTc4NjU2NTI0M30.jjreYnjYZir4TIST3tkQL1-vEmRfbDWsOJ2aZu2jXqkMN7LvVeA5xGQ0m2z58d6kR4mDoZ1goyOGJJuCszL5vBeXRjDAFKNt3PXND5w4k21qFGHXe0THCyZ_p8TdHwCA2eeNAMDJKx2HFIiQ2xOSGfHwzJf55-wQMkf4CH-9hi2DCY2eaw4M9fC94HaLpOFZQuZRQn_mvqJWDkzYJOlDoeah4aLLqOcYO2g5xpMnU0GBheUp1lHIErJU8lT24zkx8LP4er7IJjkzGMgMtHxjGrnxPWMLKPNkcuf7aJRT3hygn4r9asPY0Tlrh30yBeNHoDlF2pq77f8Pf-PX4-AYSQ",
+  "token_type": "Bearer"
+}
+
+[2026-08-12 20:07:23,308 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJ1c2VybmFtZSI6Imt0aG9tYXMiLCJleHAiOjE3ODY1NzI0NDMsImlhdCI6MTc4NjU2NTI0M30.jjreYnjYZir4TIST3tkQL1-vEmRfbDWsOJ2aZu2jXqkMN7LvVeA5xGQ0m2z58d6kR4mDoZ1goyOGJJuCszL5vBeXRjDAFKNt3PXND5w4k21qFGHXe0THCyZ_p8TdHwCA2eeNAMDJKx2HFIiQ2xOSGfHwzJf55-wQMkf4CH-9hi2DCY2eaw4M9fC94HaLpOFZQuZRQn_mvqJWDkzYJOlDoeah4aLLqOcYO2g5xpMnU0GBheUp1lHIErJU8lT24zkx8LP4er7IJjkzGMgMtHxjGrnxPWMLKPNkcuf7aJRT3hygn4r9asPY0Tlrh30yBeNHoDlF2pq77f8Pf-PX4-AYSQ' -H 'Content-Length: 75' -H 'Content-Type: application/json' -d '{"first_name": "Ryan", "last_name": "Herrera", "subject": "InvalidSubject"}' http://university:8000/teachers/
+[2026-08-12 20:07:23,308 - INFO] - Response status code: '422',elapsed time: '0:00:00.008242' 
+{
+  "detail": [
+    {
+      "type": "enum",
+      "loc": [
+        "body",
+        "subject"
+      ],
+      "msg": "Input should be 'Mathematics', 'Physics', 'History', 'Biology' or 'Geography'",
+      "input": "InvalidSubject",
+      "ctx": {
+        "expected": "'Mathematics', 'Physics', 'History', 'Biology' or 'Geography'"
+      }
+    }
+  ]
+}
+

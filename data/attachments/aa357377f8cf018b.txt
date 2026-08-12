@@ -1,0 +1,22 @@
+✅ Auth is ready
+✅ University is ready
+[2026-08-12 20:07:10,145 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 156' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=wrussell&password=sg%2BfSdm%2AJj7udvjLUbKz4Hm%24%2A%21%2B41j&password_repeat=sg%2BfSdm%2AJj7udvjLUbKz4Hm%24%2A%21%2B41j&email=shari11%40example.com' http://auth:8000/auth/register/
+[2026-08-12 20:07:10,145 - INFO] - Response status code: '201',elapsed time: '0:00:00.334285' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-12 20:07:10,542 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=wrussell&password=sg%2BfSdm%2AJj7udvjLUbKz4Hm%24%2A%21%2B41j' http://auth:8000/auth/login/
+[2026-08-12 20:07:10,542 - INFO] - Response status code: '200',elapsed time: '0:00:00.356230' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoid3J1c3NlbGwiLCJleHAiOjE3ODY1NzI0MzAsImlhdCI6MTc4NjU2NTIzMH0.I6XfqYpLx5yqwF4OcyTzU16muWwijg2CHe4aQDWnujKECECFIkil1dV-KAPXe0Xz5f1EB7RIAZ3PwFRLdz2RLJGfy6f_nyjCMQIwXAcmYV4aIWPsu77nywxKi2TJsw19_megURIhrPDZjjWNO5Lcj0UoDP1cNdmWBrn1n_vg64vrvA6aCP4Y5HwS_ZX67A-9wObJthhzi5FNLIUW5R5YcrJGre_Trz2mZ5yTKL6KN6j3ocTEo9agOfNw0X8hJa2Ysqwk7g1zatuczUJKgPRQAx1pMmAGC2RZXzgIao8avZR8r7aDBmGpPYV_2MycVerFvB9gdEFL2wZRk59pOz8d1Q",
+  "token_type": "Bearer"
+}
+
+[2026-08-12 20:07:10,586 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoid3J1c3NlbGwiLCJleHAiOjE3ODY1NzI0MzAsImlhdCI6MTc4NjU2NTIzMH0.I6XfqYpLx5yqwF4OcyTzU16muWwijg2CHe4aQDWnujKECECFIkil1dV-KAPXe0Xz5f1EB7RIAZ3PwFRLdz2RLJGfy6f_nyjCMQIwXAcmYV4aIWPsu77nywxKi2TJsw19_megURIhrPDZjjWNO5Lcj0UoDP1cNdmWBrn1n_vg64vrvA6aCP4Y5HwS_ZX67A-9wObJthhzi5FNLIUW5R5YcrJGre_Trz2mZ5yTKL6KN6j3ocTEo9agOfNw0X8hJa2Ysqwk7g1zatuczUJKgPRQAx1pMmAGC2RZXzgIao8avZR8r7aDBmGpPYV_2MycVerFvB9gdEFL2wZRk59pOz8d1Q' -H 'Content-Length: 26' -H 'Content-Type: application/json' -d '{"name": "Donald Swanson"}' http://university:8000/groups/
+[2026-08-12 20:07:10,586 - INFO] - Response status code: '201',elapsed time: '0:00:00.041007' 
+{
+  "name": "Donald Swanson",
+  "id": 1
+}
+

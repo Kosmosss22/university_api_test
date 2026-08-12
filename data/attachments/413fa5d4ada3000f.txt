@@ -1,0 +1,19 @@
+[2026-08-12 20:07:20,765 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 164' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=edward90&password=O%4081BCfHZs%23l1v_3V%2BV%25hqpY%5E%2AwB%405&password_repeat=O%4081BCfHZs%23l1v_3V%2BV%25hqpY%5E%2AwB%405&email=levinedavid%40example.com' http://auth:8000/auth/register/
+[2026-08-12 20:07:20,765 - INFO] - Response status code: '201',elapsed time: '0:00:00.307636' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-12 20:07:21,158 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 71' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=edward90&password=O%4081BCfHZs%23l1v_3V%2BV%25hqpY%5E%2AwB%405' http://auth:8000/auth/login/
+[2026-08-12 20:07:21,158 - INFO] - Response status code: '200',elapsed time: '0:00:00.352477' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE0LCJ1c2VybmFtZSI6ImVkd2FyZDkwIiwiZXhwIjoxNzg2NTcyNDQxLCJpYXQiOjE3ODY1NjUyNDF9.g-iWtjKK_erlHzzAD1uF9UFM-IXeUsN0iAwLKEQrmh7Qe4BrGET429fzHdA4_fb7ouBFqa4lQ2UTnVt3A5O8IuLyZBuF-aC6zZyIRO37ZW7O0JU6Mc0EUXMqzS29UdmZU5exdjtFvIB14-yCz5K3n1tjxgyEgdrxz8jFpDWwTAnejDkuShMI5lbyAbH0V026R9pkwufs5R2hJAxQaL-DD3ppEUESc1_kzlACMkVi1JZdGiMMdrZIu9N2pkmBSPtcmdJKOaumv8Y9VECUQtu77w9qxS7Y2A4h6_JMyFUyVE9jcs90e85JyUKU0v_ejw4DiADvFQsSyXJ8PJTEditMHQ",
+  "token_type": "Bearer"
+}
+
+[2026-08-12 20:07:21,162 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' http://university:8000/students/
+[2026-08-12 20:07:21,162 - INFO] - Response status code: '403',elapsed time: '0:00:00.002344' 
+{
+  "detail": "Access denied"
+}
+

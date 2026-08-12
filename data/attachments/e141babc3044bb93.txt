@@ -1,0 +1,19 @@
+[2026-08-12 20:07:22,194 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 153' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=uramos&password=xynV%29MSU%21B%2ADh7Eb7%2AIFP3f%5Ee%25rCM3&password_repeat=xynV%29MSU%21B%2ADh7Eb7%2AIFP3f%5Ee%25rCM3&email=scraig%40example.com' http://auth:8000/auth/register/
+[2026-08-12 20:07:22,194 - INFO] - Response status code: '201',elapsed time: '0:00:00.307711' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-12 20:07:22,588 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=uramos&password=xynV%29MSU%21B%2ADh7Eb7%2AIFP3f%5Ee%25rCM3' http://auth:8000/auth/login/
+[2026-08-12 20:07:22,588 - INFO] - Response status code: '200',elapsed time: '0:00:00.353172' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE2LCJ1c2VybmFtZSI6InVyYW1vcyIsImV4cCI6MTc4NjU3MjQ0MiwiaWF0IjoxNzg2NTY1MjQyfQ.Fu_fBUMNA79BaAJzy4crOarmq9ZcJVbqUPUZVNNXK27dAYVUGg8HcysJrkwWQz2g1QZSPt2k1PsrzRLujW7P0ddNnZAzjPoWGchsTpe_bcnUjlzKi1ChlmAqmzU3VJfE_QWvtbq9nTxjvd-RDKiZjZKG0Yend0-nUVzMKR3__hmRPsj5vg62Gp_be6oVkx9x_IBpeHHG8r2qqhndc3_AF17drKJBW9KpZgFVlLE44yo5zbbHkleOyl-L7YXzji3LRrxhr__PbhVJ9T5wtCpBASO1p2X1mp3BQouBrKmFJZ66MGVejDfs2dZKNtP91OQCD9B8f0cDAtNHk1BSh5j-Ig",
+  "token_type": "Bearer"
+}
+
+[2026-08-12 20:07:22,592 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 71' -H 'Content-Type: application/json' -d '{"first_name": "Daniel", "last_name": "Hunter", "subject": "Geography"}' http://university:8000/teachers/
+[2026-08-12 20:07:22,593 - INFO] - Response status code: '403',elapsed time: '0:00:00.002496' 
+{
+  "detail": "Access denied"
+}
+

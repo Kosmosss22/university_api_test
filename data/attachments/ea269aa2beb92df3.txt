@@ -1,0 +1,17 @@
+INFO     Logger:logger.py:37 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 160' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=edwardskimberly&password=XcuZhWtm%25%2AomJ3FjL25dD%5ELlH%28TQPi&password_repeat=XcuZhWtm%25%2AomJ3FjL25dD%5ELlH%28TQPi&email=manningjames%40example.org' http://auth:8000/auth/register/
+INFO     Logger:logger.py:37 Response status code: '201',elapsed time: '0:00:00.307789' 
+{
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:37 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 72' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=edwardskimberly&password=XcuZhWtm%25%2AomJ3FjL25dD%5ELlH%28TQPi' http://auth:8000/auth/login/
+INFO     Logger:logger.py:37 Response status code: '200',elapsed time: '0:00:00.352339' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJ1c2VybmFtZSI6ImVkd2FyZHNraW1iZXJseSIsImV4cCI6MTc4NjU3MjQzOCwiaWF0IjoxNzg2NTY1MjM4fQ.D_KSIoPn7TRoupZewg7RoLY0jp14IzTFfgRacPTqh3ChOs8nBMU992tUR-8fDYpH793T_kyAo-q1wEYrYRc8G7wdPoBu54AhPQUeJmYd0quB-_5f7vc2e93b8c5v6dt9aT8c4ef6w-lqsaukp2y72YmaN4rKltXeE4wC9Zn27vRvjf2S5prZjKJIC5lePyo6q5pFYZWRdI5GbjA6KCRJ-HKvGtzO5TUnzzVoVPX7pGqkqmy4u7_OD52OB_31d4zh3DdAlTud5o2eXISIiSXB7QxAO77Um4MIk7iKVTnZOOVToVHtTXUvfJtJ4jp5ETbii9ELFL_bNekD16a3PUMQUQ",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:37 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 25' -H 'Content-Type: application/json' -d '{"name": "Anthony Roman"}' http://university:8000/groups/
+INFO     Logger:logger.py:37 Response status code: '403',elapsed time: '0:00:00.002518' 
+{
+  "detail": "Access denied"
+}

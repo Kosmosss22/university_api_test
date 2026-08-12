@@ -1,0 +1,36 @@
+INFO     Logger:logger.py:37 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 144' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=fwebster&password=g%26_y29sHWa1W0VrYv%26U6eNaZRkG%40U1&password_repeat=g%26_y29sHWa1W0VrYv%26U6eNaZRkG%40U1&email=scott42%40example.com' http://auth:8000/auth/register/
+INFO     Logger:logger.py:37 Response status code: '201',elapsed time: '0:00:00.309226' 
+{
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:37 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 63' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=fwebster&password=g%26_y29sHWa1W0VrYv%26U6eNaZRkG%40U1' http://auth:8000/auth/login/
+INFO     Logger:logger.py:37 Response status code: '200',elapsed time: '0:00:00.357828' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiZndlYnN0ZXIiLCJleHAiOjE3ODY1NzI0MzIsImlhdCI6MTc4NjU2NTIzMn0.RWW8e1heoL10hgLSkcCdYnoD0iv8ZqheK5WZieYTLaIh08QjxLmNvz7eXOJC6JkrP870Fm9SieXiHIQ2oh7_L-PuptQVsYFRyRwI-6PmXScZAxCAKzEBEntcRnsprub29APRKFk92hYLBxWqhO0q7kENJjb3F_8v2Dqz-Km9aPZ9GUtsi21ULhem44xl3g9FY-M9zWoWgUJctzoQ1pn-f2icUBHPiC3jzqY5uIHhnzwx7pNJixZ5wOBm5deVywK7jnNWoI35hG57LvlulIAZRbML2J0MLEggrDP5J-L9S0SdObb5QOEF5yxdAwp1r_BdMmaWSxePslLN5kJvAnEKsA",
+  "token_type": "Bearer"
+}
+
+INFO     Logger:logger.py:37 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiZndlYnN0ZXIiLCJleHAiOjE3ODY1NzI0MzIsImlhdCI6MTc4NjU2NTIzMn0.RWW8e1heoL10hgLSkcCdYnoD0iv8ZqheK5WZieYTLaIh08QjxLmNvz7eXOJC6JkrP870Fm9SieXiHIQ2oh7_L-PuptQVsYFRyRwI-6PmXScZAxCAKzEBEntcRnsprub29APRKFk92hYLBxWqhO0q7kENJjb3F_8v2Dqz-Km9aPZ9GUtsi21ULhem44xl3g9FY-M9zWoWgUJctzoQ1pn-f2icUBHPiC3jzqY5uIHhnzwx7pNJixZ5wOBm5deVywK7jnNWoI35hG57LvlulIAZRbML2J0MLEggrDP5J-L9S0SdObb5QOEF5yxdAwp1r_BdMmaWSxePslLN5kJvAnEKsA' -H 'Content-Length: 27' -H 'Content-Type: application/json' -d '{"name": "Heather Johnson"}' http://university:8000/groups/
+INFO     Logger:logger.py:37 Response status code: '201',elapsed time: '0:00:00.022864' 
+{
+  "name": "Heather Johnson",
+  "id": 4
+}
+INFO     Logger:logger.py:37 Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiZndlYnN0ZXIiLCJleHAiOjE3ODY1NzI0MzIsImlhdCI6MTc4NjU2NTIzMn0.RWW8e1heoL10hgLSkcCdYnoD0iv8ZqheK5WZieYTLaIh08QjxLmNvz7eXOJC6JkrP870Fm9SieXiHIQ2oh7_L-PuptQVsYFRyRwI-6PmXScZAxCAKzEBEntcRnsprub29APRKFk92hYLBxWqhO0q7kENJjb3F_8v2Dqz-Km9aPZ9GUtsi21ULhem44xl3g9FY-M9zWoWgUJctzoQ1pn-f2icUBHPiC3jzqY5uIHhnzwx7pNJixZ5wOBm5deVywK7jnNWoI35hG57LvlulIAZRbML2J0MLEggrDP5J-L9S0SdObb5QOEF5yxdAwp1r_BdMmaWSxePslLN5kJvAnEKsA' -H 'Content-Length: 138' -H 'Content-Type: application/json' -d '{"first_name": "Larry", "last_name": "Hines", "email": "rachel93@example.org", "degree": "Master", "phone": "+79268527830", "group_id": 4}' http://university:8000/students/
+INFO     Logger:logger.py:37 Response status code: '201',elapsed time: '0:00:00.011286' 
+{
+  "first_name": "Larry",
+  "last_name": "Hines",
+  "email": "rachel93@example.org",
+  "degree": "Master",
+  "phone": "+79268527830",
+  "group_id": 4,
+  "id": 3
+}
+
+INFO     Logger:logger.py:37 Response: curl -X DELETE -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiZndlYnN0ZXIiLCJleHAiOjE3ODY1NzI0MzIsImlhdCI6MTc4NjU2NTIzMn0.RWW8e1heoL10hgLSkcCdYnoD0iv8ZqheK5WZieYTLaIh08QjxLmNvz7eXOJC6JkrP870Fm9SieXiHIQ2oh7_L-PuptQVsYFRyRwI-6PmXScZAxCAKzEBEntcRnsprub29APRKFk92hYLBxWqhO0q7kENJjb3F_8v2Dqz-Km9aPZ9GUtsi21ULhem44xl3g9FY-M9zWoWgUJctzoQ1pn-f2icUBHPiC3jzqY5uIHhnzwx7pNJixZ5wOBm5deVywK7jnNWoI35hG57LvlulIAZRbML2J0MLEggrDP5J-L9S0SdObb5QOEF5yxdAwp1r_BdMmaWSxePslLN5kJvAnEKsA' -H 'Content-Length: 0' http://university:8000/students/3/
+INFO     Logger:logger.py:37 Response status code: '200',elapsed time: '0:00:00.011957' 
+{
+  "detail": "Student deleted"
+}

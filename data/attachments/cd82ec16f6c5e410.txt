@@ -1,0 +1,22 @@
+[2026-08-12 20:07:21,474 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 147' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=caseycarter&password=k%24G4xr9OjiHXESBPfkt%403EbSJl5R5U&password_repeat=k%24G4xr9OjiHXESBPfkt%403EbSJl5R5U&email=gabrielle70%40example.org' http://auth:8000/auth/register/
+[2026-08-12 20:07:21,474 - INFO] - Response status code: '201',elapsed time: '0:00:00.307658' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-12 20:07:21,868 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 64' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=caseycarter&password=k%24G4xr9OjiHXESBPfkt%403EbSJl5R5U' http://auth:8000/auth/login/
+[2026-08-12 20:07:21,869 - INFO] - Response status code: '200',elapsed time: '0:00:00.352153' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE1LCJ1c2VybmFtZSI6ImNhc2V5Y2FydGVyIiwiZXhwIjoxNzg2NTcyNDQxLCJpYXQiOjE3ODY1NjUyNDF9.S9vV83L6EEnP1oVruRvGoCI2EAmlsmcMASUrEcaLcEZ0L92eJ1wGW5sclSJNvx97bixHNnEZ6EsjiiX_xlyBWXgSytJyzKCUwlSQ9dOnSmdKMsVXixN1giKHNRZpXkYcOzJJCrmYw40yY9sN7wfNvzikKiUgGH06cptENVY8nfROHzz7bsXNrNx7YXOLqRa7K8IcyP2yDLsSvnpe5Fkgoy12ktdXFYrk3EbASiG51BqR6RHqWDpIMnCZ1XPHXAgM7vwXXnGv_KHk8dXZ8w443Lq-t1xRDDaiNUIYj5W6TswNIn3IVR3qLGUl7HqMWfmbONORt065Oszj5apPj_aGXg",
+  "token_type": "Bearer"
+}
+
+[2026-08-12 20:07:21,882 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE1LCJ1c2VybmFtZSI6ImNhc2V5Y2FydGVyIiwiZXhwIjoxNzg2NTcyNDQxLCJpYXQiOjE3ODY1NjUyNDF9.S9vV83L6EEnP1oVruRvGoCI2EAmlsmcMASUrEcaLcEZ0L92eJ1wGW5sclSJNvx97bixHNnEZ6EsjiiX_xlyBWXgSytJyzKCUwlSQ9dOnSmdKMsVXixN1giKHNRZpXkYcOzJJCrmYw40yY9sN7wfNvzikKiUgGH06cptENVY8nfROHzz7bsXNrNx7YXOLqRa7K8IcyP2yDLsSvnpe5Fkgoy12ktdXFYrk3EbASiG51BqR6RHqWDpIMnCZ1XPHXAgM7vwXXnGv_KHk8dXZ8w443Lq-t1xRDDaiNUIYj5W6TswNIn3IVR3qLGUl7HqMWfmbONORt065Oszj5apPj_aGXg' -H 'Content-Length: 73' -H 'Content-Type: application/json' -d '{"first_name": "Jessica", "last_name": "Higgins", "subject": "Geography"}' http://university:8000/teachers/
+[2026-08-12 20:07:21,882 - INFO] - Response status code: '201',elapsed time: '0:00:00.011390' 
+{
+  "first_name": "Jessica",
+  "last_name": "Higgins",
+  "subject": "Geography",
+  "id": 3
+}
+

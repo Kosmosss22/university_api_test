@@ -1,0 +1,19 @@
+[2026-08-12 20:07:16,308 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 162' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kimberly92&password=%282FLD%26hsch%2A%2Bfa%29qm81nS86Ygn3H7_&password_repeat=%282FLD%26hsch%2A%2Bfa%29qm81nS86Ygn3H7_&email=benjamintiffany%40example.org' http://auth:8000/auth/register/
+[2026-08-12 20:07:16,308 - INFO] - Response status code: '201',elapsed time: '0:00:00.307814' 
+{
+  "detail": "User registered"
+}
+
+[2026-08-12 20:07:16,704 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kimberly92&password=%282FLD%26hsch%2A%2Bfa%29qm81nS86Ygn3H7_' http://auth:8000/auth/login/
+[2026-08-12 20:07:16,704 - INFO] - Response status code: '200',elapsed time: '0:00:00.354712' 
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjgsInVzZXJuYW1lIjoia2ltYmVybHk5MiIsImV4cCI6MTc4NjU3MjQzNiwiaWF0IjoxNzg2NTY1MjM2fQ.JflnVTnoV2s8j4-TSP5Io6oSKuGlYazsLU9OgkicOimq47g7_g8E6OF1lGvkcCz1yzw2J5dEEpV8mRJy1FfQjvU9j6Lrx-fnc0tGQEIUilTM0XJwgTibrpmCPXw_6n8Flr5aen1AYIJgVh7qzUSJjoOGfpZIBHp-zffkNK0BzQepqZsMJd5K6fUyFmYcGYqnoeCg1lpL64jFfSF5Y6t6dDmr3DBnQ28LTbJTJLt97bpgaS8mghRn4tDZw2-66pWU2vDbVdDb94cxXVZcwlOOCF9MFnPWUTt1lmdJg3QiKaWXDSc_M89tZqppEaG-LOC21Q0ovSDLTpxcHBGf4ok8wA",
+  "token_type": "Bearer"
+}
+
+[2026-08-12 20:07:16,708 - INFO] - Response: curl -H 'User-Agent: python-requests/2.34.2' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' http://university:8000/grades/stats/
+[2026-08-12 20:07:16,708 - INFO] - Response status code: '403',elapsed time: '0:00:00.002394' 
+{
+  "detail": "Access denied"
+}
+
