@@ -35,3 +35,10 @@ env/
 # Allure test reports and artifacts (CI/CD logs)
 allure-results/
 allure-report/
+
+# Git & Docker
+.git/
+.gitignore
+.dockerignore
+Dockerfile
+docker-compose*.yml

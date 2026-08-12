@@ -5,10 +5,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY tests/ ./tests/
-COPY services/ ./services/
-COPY utils/ ./utils/
-COPY logger/ ./logger/
+COPY . .
 
 ENV PYTHONPATH=/app
 

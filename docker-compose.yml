@@ -47,12 +47,6 @@ services:
     depends_on:
       postgres_auth:
         condition: service_healthy
-    healthcheck:
-      test: [ "CMD-SHELL", "bash -c 'exec 3<>/dev/tcp/localhost/8000'" ]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s
 
   university:
     image: mekidmetal/university-service
@@ -70,9 +64,3 @@ services:
     depends_on:
       postgres_university:
         condition: service_healthy
-    healthcheck:
-      test: [ "CMD-SHELL", "bash -c 'exec 3<>/dev/tcp/localhost/8000'" ]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s

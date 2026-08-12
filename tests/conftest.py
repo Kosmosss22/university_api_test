@@ -1,4 +1,7 @@
+import time
+
 import pytest
+import requests
 from faker import Faker
 
 from services.auth.auth_services import AuthServices
@@ -8,6 +11,27 @@ from services.university.university_services import UniversityServices
 from utils.api_utils import ApiUtils
 
 faker = Faker()
+
+def wait_for_service(url, service_name, timeout=180):
+    start = time.time()
+    while time.time() < start + timeout:
+        try:
+            response = requests.get(url)
+            if response.status_code == 200:
+                print(f"✅ {service_name} is ready")
+                return
+        except requests.RequestException:
+            time.sleep(1)
+            continue
+        time.sleep(1)
+    raise RuntimeError(...)
+
+
+@pytest.fixture(scope="session", autouse=True)
+def wait_for_services():
+    wait_for_service(AuthServices.SERVICES_URL + "/docs", "Auth")
+    wait_for_service(UniversityServices.SERVICES_URL + "/docs", "University")
+    yield
 
 
 @pytest.fixture(scope="function", autouse=False)

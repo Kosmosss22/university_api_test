@@ -36,7 +36,7 @@ jobs:
           echo "AUTH_SERVICE_API_URL='${{ vars.AUTH_SERVICE_API_URL }}'" >> .env
 
       - name: Start API services and wait
-        run: docker compose -f docker-compose.yml up -d --wait
+        run: docker compose -f docker-compose.yml up -d
 
       - name: Run tests in Docker
         run: docker compose -f docker-compose.yml -f docker-compose.test.yml run --rm tests
